@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="R. Charan Shankar Naidu — Marketing Manager. 10+ years across performance marketing, B2C and B2B growth, CRM, brand and AI-driven marketing operations, spanning EdTech, FinTech, FMCG and Agritech.">
+<title>R. Charan Shankar Naidu — Marketing &amp; Growth</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#E9E2D0;
+    --paper-light:#F3EFE2;
+    --paper-deep:#DFD6BE;
+    --ink:#20261F;
+    --ink-soft:#565F53;
+    --ink-faint:#8C9186;
+    --rule:#C6BC9E;
+    --green:#2F6B4C;
+    --green-deep:#1F4A34;
+    --rust:#A44430;
+    --max:1160px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', Arial, sans-serif;
+    font-size:16px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+
+  .serif{ font-family:'Fraunces', Georgia, serif; }
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+
+  .wrap{ width:min(92%, var(--max)); margin:0 auto; }
+
+  ::selection{ background:var(--green); color:var(--paper-light); }
+
+  a:focus-visible,
+  button:focus-visible{
+    outline:2px solid var(--rust);
+    outline-offset:3px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+
+  /* ===== MASTHEAD ===== */
+
+  .masthead{
+    border-bottom:1px solid var(--ink);
+    background:var(--paper);
+    position:sticky;
+    top:0;
+    z-index:50;
+  }
+
+  .masthead-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.02em;
+    color:var(--ink-soft);
+    border-bottom:1px solid var(--rule);
+  }
+
+  .masthead-nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 0;
+  }
+
+  .wordmark{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:22px;
+    letter-spacing:-.01em;
+  }
+
+  .navlinks{
+    display:flex;
+    gap:26px;
+    font-size:14px;
+  }
+
+  .navlinks a{
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+  }
+
+  .navlinks a:hover{ border-bottom-color:var(--ink); }
+
+  .nav-toggle{ display:none; }
+
+  /* ===== TICKER ===== */
+
+  .ticker{
+    border-bottom:1px solid var(--ink);
+    background:var(--ink);
+    color:var(--paper-light);
+    overflow:hidden;
+    white-space:nowrap;
+    padding:9px 0;
+  }
+
+  .ticker-track{
+    display:inline-flex;
+    gap:48px;
+    padding-left:100%;
+    animation:ticker 38s linear infinite;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:.02em;
+  }
+
+  .ticker-track span{ opacity:.92; }
+  .ticker-track .up{ color:#8FD6AB; }
+
+  @keyframes ticker{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-100%); }
+  }
+
+  /* ===== HERO ===== */
+
+  .hero{ padding:64px 0 56px; }
+
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:64px;
+    align-items:start;
+  }
+
+  .dateline{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+  }
+
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-size:clamp(34px,4.6vw,54px);
+    line-height:1.08;
+    letter-spacing:-.015em;
+    margin:0 0 22px;
+    max-width:15ch;
+  }
+
+  h1 em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--green-deep);
+  }
+
+  .hero-lede{
+    font-size:18px;
+    color:var(--ink-soft);
+    max-width:52ch;
+    margin:0 0 28px;
+  }
+
+  .hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+
+  .btn{
+    display:inline-block;
+    padding:12px 20px;
+    border:1px solid var(--ink);
+    font-size:14px;
+    font-family:'IBM Plex Mono', monospace;
+    text-decoration:none;
+    color:var(--ink);
+    background:transparent;
+  }
+
+  .btn.solid{
+    background:var(--ink);
+    color:var(--paper-light);
+  }
+
+  .btn:hover{ background:var(--ink); color:var(--paper-light); }
+  .btn.solid:hover{ background:var(--green-deep); border-color:var(--green-deep); }
+
+  /* ledger */
+
+  .ledger{
+    border-top:1px solid var(--ink);
+    padding-top:18px;
+  }
+
+  .ledger-title{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-bottom:16px;
+  }
+
+  .ledger-row{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    padding:9px 0;
+    border-bottom:1px solid var(--rule);
+  }
+
+  .ledger-row:last-child{ border-bottom:1px solid var(--ink); }
+
+  .ledger-row .label{ font-size:14.5px; white-space:nowrap; }
+
+  .ledger-row .fill{
+    flex:1;
+    border-bottom:1px dotted var(--ink-faint);
+    transform:translateY(-4px);
+  }
+
+  .ledger-row .value{
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:500;
+    font-size:15px;
+    white-space:nowrap;
+  }
+
+  /* ===== SECTION shell ===== */
+
+  section{
+    padding:78px 0;
+    border-bottom:1px solid var(--rule);
+  }
+
+  .section-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--rust);
+    margin-bottom:10px;
+  }
+
+  h2{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-size:clamp(28px,3.6vw,40px);
+    letter-spacing:-.015em;
+    margin:0 0 16px;
+    max-width:20ch;
+  }
+
+  .section-intro{
+    color:var(--ink-soft);
+    max-width:64ch;
+    font-size:16.5px;
+    margin:0 0 40px;
+  }
+
+  /* ===== COVERAGE / DOMAIN TABLE ===== */
+
+  .coverage-grid{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:50px;
+  }
+
+  .coverage-copy p{ color:var(--ink-soft); }
+
+  .coverage-copy strong{ color:var(--ink); }
+
+  .domain-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14.5px;
+  }
+
+  .domain-table th{
+    text-align:left;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:500;
+    font-size:12px;
+    color:var(--ink-soft);
+    padding:0 0 12px;
+    border-bottom:1px solid var(--ink);
+  }
+
+  .domain-table td{
+    padding:14px 10px 14px 0;
+    border-bottom:1px solid var(--rule);
+    vertical-align:top;
+  }
+
+  .domain-table tr:last-child td{ border-bottom:1px solid var(--ink); }
+
+  .domain-table td.dtag{
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:500;
+    color:var(--green-deep);
+    white-space:nowrap;
+    width:1%;
+  }
+
+  .domain-table td.dwhere{
+    color:var(--ink-faint);
+    white-space:nowrap;
+    width:1%;
+    padding-right:18px;
+  }
+
+  /* ===== EXPERIENCE ===== */
+
+  .role{
+    display:grid;
+    grid-template-columns:190px 1fr;
+    gap:36px;
+    padding:34px 0;
+    border-top:1px solid var(--rule);
+  }
+
+  .role:first-child{ border-top:none; }
+
+  .role-date{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+    padding-top:3px;
+  }
+
+  .role h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:24px;
+    margin:0 0 4px;
+  }
+
+  .role .company{
+    color:var(--rust);
+    font-size:14.5px;
+    margin-bottom:16px;
+  }
+
+  .role ul{
+    margin:0;
+    padding-left:18px;
+    color:var(--ink-soft);
+  }
+
+  .role li{ margin:8px 0; }
+
+  .role li b{ color:var(--ink); font-weight:600; }
+
+  .role-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+
+  .role-tags span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    border:1px solid var(--rule);
+    padding:4px 9px;
+    color:var(--ink-soft);
+  }
+
+  /* ===== AI TABLE ===== */
+
+  .ai-table{ width:100%; border-collapse:collapse; font-size:14.5px; }
+
+  .ai-table th{
+    text-align:left;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:500;
+    font-size:12px;
+    color:var(--ink-soft);
+    padding:0 14px 12px 0;
+    border-bottom:1px solid var(--ink);
+  }
+
+  .ai-table td{
+    padding:16px 14px 16px 0;
+    border-bottom:1px solid var(--rule);
+    vertical-align:top;
+    color:var(--ink-soft);
+  }
+
+  .ai-table tr:last-child td{ border-bottom:1px solid var(--ink); }
+
+  .ai-table td.tool{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--ink);
+    font-weight:500;
+    white-space:nowrap;
+  }
+
+  .ai-note{
+    margin-top:26px;
+    padding:20px 22px;
+    background:var(--paper-light);
+    border-left:2px solid var(--green);
+    font-size:15px;
+    color:var(--ink-soft);
+    max-width:70ch;
+  }
+
+  /* ===== WORK / FILTER ===== */
+
+  .filters{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:36px;
+    border-top:1px solid var(--ink);
+    border-bottom:1px solid var(--ink);
+    padding:16px 0;
+  }
+
+  .filter-btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    padding:8px 14px;
+    border:1px solid var(--ink-faint);
+    background:transparent;
+    color:var(--ink-soft);
+    cursor:pointer;
+  }
+
+  .filter-btn.active,
+  .filter-btn:hover{
+    background:var(--ink);
+    color:var(--paper-light);
+    border-color:var(--ink);
+  }
+
+  .work-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:2px;
+    background:var(--ink);
+    border:1px solid var(--ink);
+  }
+
+  .work-card{
+    background:var(--paper-light);
+    display:flex;
+    flex-direction:column;
+    transition:opacity .25s ease;
+  }
+
+  .work-card.hide{ display:none; }
+
+  .work-card img{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+    filter:grayscale(.15) contrast(1.03);
+  }
+
+  .work-body{ padding:22px; flex:1; display:flex; flex-direction:column; }
+
+  .work-no{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--rust);
+    margin-bottom:8px;
+  }
+
+  .work-body h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:19px;
+    margin:0 0 8px;
+  }
+
+  .work-body p{
+    color:var(--ink-soft);
+    font-size:14px;
+    margin:0 0 14px;
+    flex:1;
+  }
+
+  .work-domains{ display:flex; flex-wrap:wrap; gap:6px; }
+
+  .work-domains span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    color:var(--ink-faint);
+    border:1px solid var(--rule);
+    padding:3px 7px;
+  }
+
+  /* ===== ALBUM ===== */
+
+  .album{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:2px;
+    background:var(--ink);
+    border:1px solid var(--ink);
+  }
+
+  .album figure{ margin:0; background:var(--paper-light); }
+
+  .album img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    filter:grayscale(.2);
+  }
+
+  .album figcaption{
+    padding:10px 12px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+  }
+
+  /* ===== INSTAGRAM / CHARAN BUILDS ===== */
+
+  .press{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:50px;
+    align-items:center;
+    background:var(--paper-deep);
+    padding:44px;
+    border:1px solid var(--ink);
+  }
+
+  .press-photo{ border:1px solid var(--ink); overflow:hidden; }
+
+  .press-photo img{
+    aspect-ratio:1/1;
+    object-fit:cover;
+    filter:grayscale(.15);
+  }
+
+  .press h3{
+    font-family:'Fraunces', serif;
+    font-size:26px;
+    font-weight:500;
+    margin:0 0 14px;
+  }
+
+  .press p{ color:var(--ink-soft); margin:0 0 22px; max-width:52ch; }
+
+  .press .handle{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--green-deep);
+  }
+
+  /* ===== TOOLS strip ===== */
+
+  .tool-strip{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0;
+    border-top:1px solid var(--ink);
+    border-left:1px solid var(--ink);
+  }
+
+  .tool-strip span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    padding:12px 18px;
+    border-right:1px solid var(--ink);
+    border-bottom:1px solid var(--ink);
+  }
+
+  /* ===== FOOTER / CONTACT ===== */
+
+  .footer{ padding:70px 0 46px; border-bottom:none; }
+
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:50px;
+    align-items:end;
+    padding-bottom:40px;
+    border-bottom:1px solid var(--ink);
+    margin-bottom:26px;
+  }
+
+  .contact-grid h2{ max-width:14ch; }
+
+  .contact-details{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px;
+    color:var(--ink-soft);
+    line-height:2.1;
+  }
+
+  .contact-details a{
+    text-decoration:none;
+    border-bottom:1px solid var(--ink-faint);
+  }
+
+  .contact-details a:hover{ border-bottom-color:var(--ink); }
+
+  .foot-meta{
+    display:flex;
+    justify-content:space-between;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-faint);
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  /* ===== RESPONSIVE ===== */
+
+  @media (max-width:900px){
+    .hero-grid,
+    .coverage-grid,
+    .press,
+    .contact-grid{ grid-template-columns:1fr; }
+
+    .work-grid{ grid-template-columns:repeat(2,1fr); }
+    .album{ grid-template-columns:repeat(3,1fr); }
+    .navlinks{ display:none; }
+    .role{ grid-template-columns:1fr; gap:8px; }
+  }
+
+  @media (max-width:560px){
+    .work-grid{ grid-template-columns:1fr; }
+    .album{ grid-template-columns:repeat(2,1fr); }
+    .masthead-top{ flex-direction:column; align-items:flex-start; gap:4px; }
+    section{ padding:56px 0; }
+    .press{ padding:26px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead-top">
+    <span>Dubai · Bangalore — updated 2026</span>
+    <span>Marketing &amp; growth, since 2015</span>
+  </div>
+  <div class="wrap masthead-nav">
+    <div class="wordmark">R. Charan Shankar Naidu</div>
+    <nav class="navlinks">
+      <a href="#coverage">Coverage</a>
+      <a href="#experience">Experience</a>
+      <a href="#ai">AI &amp; automation</a>
+      <a href="#work">Selected work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>REVENUE ₹1 CR → ₹50 CR <span class="up">▲</span></span>
+    <span>AUDIENCE BUILT 8,00,000+ <span class="up">▲</span></span>
+    <span>ONLINE SALES +180% YOY <span class="up">▲</span></span>
+    <span>MARKETS — INDIA / GCC / USA / SE ASIA</span>
+    <span>GTM LAUNCHES 15+</span>
+    <span>DOMAINS — EDTECH · FINTECH · FMCG · AGRITECH</span>
+    <span>REVENUE ₹1 CR → ₹50 CR <span class="up">▲</span></span>
+    <span>AUDIENCE BUILT 8,00,000+ <span class="up">▲</span></span>
+    <span>ONLINE SALES +180% YOY <span class="up">▲</span></span>
+    <span>MARKETS — INDIA / GCC / USA / SE ASIA</span>
+    <span>GTM LAUNCHES 15+</span>
+    <span>DOMAINS — EDTECH · FINTECH · FMCG · AGRITECH</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="dateline">Marketing Manager — B2C &amp; B2B growth, CRM and AI-led marketing operations</div>
+      <h1>Marketing, <em>underwritten by data.</em></h1>
+      <p class="hero-lede">
+        Ten years building acquisition, brand and CRM systems across EdTech, FinTech, FMCG
+        and Agritech — from a ₹1 Cr agri-brand to a global forex education academy. I move
+        between B2C funnels and B2B partnerships, and I've spent the last year rebuilding
+        how much of that work is done with AI.
+      </p>
+      <div class="hero-actions">
+        <a class="btn solid" href="#work">Read the selected work</a>
+        <a class="btn" href="mailto:charan.shankar09@gmail.com">Write to me</a>
+      </div>
+    </div>
+
+    <div class="ledger">
+      <div class="ledger-title">Career ledger, as it stands</div>
+      <div class="ledger-row"><span class="label">Years in marketing</span><span class="fill"></span><span class="value">10+</span></div>
+      <div class="ledger-row"><span class="label">Revenue scaled, single brand</span><span class="fill"></span><span class="value">₹1 Cr → ₹50 Cr</span></div>
+      <div class="ledger-row"><span class="label">Social audience built</span><span class="fill"></span><span class="value">8,00,000+</span></div>
+      <div class="ledger-row"><span class="label">Annual budget directed</span><span class="fill"></span><span class="value">₹5 Cr</span></div>
+      <div class="ledger-row"><span class="label">GTM product launches led</span><span class="fill"></span><span class="value">15+</span></div>
+      <div class="ledger-row"><span class="label">Online sales growth, YoY</span><span class="fill"></span><span class="value">+180%</span></div>
+      <div class="ledger-row"><span class="label">Cross-functional team led</span><span class="fill"></span><span class="value">18 members</span></div>
+      <div class="ledger-row"><span class="label">Markets worked across</span><span class="fill"></span><span class="value">India · GCC · USA · SEA</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- COVERAGE -->
+<section id="coverage">
+  <div class="wrap coverage-grid">
+    <div>
+      <div class="section-tag">Coverage</div>
+      <h2>Built for whichever domain lands next.</h2>
+      <div class="coverage-copy">
+        <p>
+          I've run <strong>B2C acquisition</strong> — direct-to-learner funnels for a forex
+          academy, direct-to-consumer sales for an agri brand — and I've closed
+          <strong>B2B partnerships</strong>, from an export deal with Canada's Trade
+          Commissioner to a co-marketing collaboration with a funded agritech company.
+        </p>
+        <p>
+          That range is the point. The channels, the CRM logic and the AI layer stay the
+          same; only the audience and the compliance rules change. It's why I've been able
+          to move from agritech to fintech education without losing a step.
+        </p>
+      </div>
+    </div>
+
+    <table class="domain-table">
+      <thead>
+        <tr><th>Domain</th><th>Where</th><th>What I ran</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="dtag">FinTech / Forex ed.</td>
+          <td class="dwhere">Primexar, Onexar</td>
+          <td>B2C global student acquisition, compliance-safe Meta ad copy, AI call &amp; CRM stack</td>
+        </tr>
+        <tr>
+          <td class="dtag">EdTech</td>
+          <td class="dwhere">Primexar</td>
+          <td>Workshop and event funnels, SEO paired with paid media, WhatsApp nurture</td>
+        </tr>
+        <tr>
+          <td class="dtag">Agritech</td>
+          <td class="dwhere">Irra Agrotech</td>
+          <td>Brand build from ₹1 Cr to ₹50 Cr, B2C e-commerce, B2B distribution</td>
+        </tr>
+        <tr>
+          <td class="dtag">FMCG</td>
+          <td class="dwhere">Irra Agrotech</td>
+          <td>ATL/BTL campaigns across TV, billboards and digital; 15+ launches</td>
+        </tr>
+        <tr>
+          <td class="dtag">B2B / Trade</td>
+          <td class="dwhere">Canada Trade Comm., Barrix Agro</td>
+          <td>Export collaboration and partner co-marketing</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-tag">Experience</div>
+    <h2>Where the numbers above came from.</h2>
+    <p class="section-intro">Two roles, one throughline: turn a marketing function from
+      guesswork into something measurable, then keep it running with less manual effort
+      each year.</p>
+
+    <div class="role">
+      <div class="role-date">Sep 2025 — Present</div>
+      <div>
+        <h3>Marketing Manager</h3>
+        <div class="company">Primexar Professional Management · under Onexar · Dubai</div>
+        <ul>
+          <li>Own <b>end-to-end B2C acquisition</b> for a KHDA-approved forex trading
+            academy across India, GCC, USA and Southeast Asia.</li>
+          <li>Rebuilt the department in 7 months from guesswork to a <b>100% data-driven</b>
+            marketing culture, with tracking built from scratch.</li>
+          <li>Run and optimise spend across <b>Google Ads, Meta and LinkedIn</b>, holding
+            ROAS up and acquisition cost down.</li>
+          <li>Built the <b>AI content pipeline</b> — HeyGen, ElevenLabs, Canva and Zapier —
+            that now produces most video and creative output.</li>
+          <li>Put <b>Retell AI</b> into the call centre for automated calling and lead
+            scoring, so the team closes enrollments faster.</li>
+          <li>Architected the <b>Zoho CRM</b> funnel with SQL-based extraction — zero lead
+            leakage across four regions.</li>
+          <li>Automated <b>WhatsApp Business API</b> sequences that keep prospective
+            learners engaged around the clock.</li>
+          <li>Report CAC, ROAS and conversion live to leadership through <b>Power BI</b>
+            dashboards.</li>
+        </ul>
+        <div class="role-tags">
+          <span>B2C</span><span>Google Ads</span><span>Meta</span><span>LinkedIn</span>
+          <span>Zoho CRM</span><span>Retell AI</span><span>WhatsApp API</span><span>Power BI</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-date">Jun 2015 — Apr 2025</div>
+      <div>
+        <h3>Marketing &amp; Growth Lead</h3>
+        <div class="company">Microbi Agrotech Pvt Ltd · Irra Agrotech</div>
+        <ul>
+          <li>Scaled client revenue from <b>₹1 Cr to ₹30 Cr</b> in three years, then to
+            <b>₹50 Cr</b>, through strategy, distribution and GTM execution.</li>
+          <li>Ran both <b>B2C and B2B marketing</b> in parallel — consumer acquisition
+            alongside distributor and partner growth.</li>
+          <li>Built and grew a social audience of <b>8 lakh+</b> across YouTube and Meta,
+            with organic video reaching millions of views.</li>
+          <li>Led ATL &amp; BTL campaigns across TV, billboards, YouTube, Google and Meta.</li>
+          <li>Directed <b>15+ GTM launches</b>, and grew online sales <b>180% YoY</b> across
+            Amazon, Flipkart, Agriplex and the website.</li>
+          <li>Held a <b>₹5 Cr</b> annual budget and led an <b>18-member</b> cross-functional
+            team across marketing, tech and finance.</li>
+          <li>Ran branded events at agri exhibitions for 9 years, and supported expansion
+            into <b>Kenya and Southeast Asia</b>.</li>
+        </ul>
+        <div class="role-tags">
+          <span>B2C</span><span>B2B</span><span>YouTube</span><span>Meta</span>
+          <span>ATL/BTL</span><span>GTM</span><span>E-commerce</span><span>P&amp;L</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-date">2014 — 2015</div>
+      <div>
+        <h3>Credit Appraisal Officer</h3>
+        <div class="company">DHFL</div>
+        <ul>
+          <li>Evaluated salaried and self-employed home loan applications with financial
+            and risk analysis, ensuring policy compliance and timely approvals — the
+            numbers discipline that still shapes how I read a campaign report.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI & AUTOMATION -->
+<section id="ai">
+  <div class="wrap">
+    <div class="section-tag">AI &amp; automation</div>
+    <h2>Where AI actually sits in the funnel.</h2>
+    <p class="section-intro">Not a slide of logos — this is the stack running inside the
+      marketing operation today, and what changed once each piece went live.</p>
+
+    <table class="ai-table">
+      <thead>
+        <tr><th>Tool</th><th>Sits where</th><th>What it changed</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tool">Retell AI</td>
+          <td>Call centre, outbound</td>
+          <td>Automated calling and lead scoring, so agents spend time on qualified
+            conversations instead of dialling</td>
+        </tr>
+        <tr>
+          <td class="tool">Zoho CRM + SQL</td>
+          <td>Funnel &amp; targeting</td>
+          <td>Zero lead leakage across four regions, with SQL pulls feeding campaign
+            targeting directly</td>
+        </tr>
+        <tr>
+          <td class="tool">WhatsApp Business API</td>
+          <td>Nurture</td>
+          <td>Always-on, AI-assisted sequences that keep prospective learners engaged
+            without a human on every message</td>
+        </tr>
+        <tr>
+          <td class="tool">HeyGen + ElevenLabs</td>
+          <td>Video &amp; localisation</td>
+          <td>Localised video at a speed a production team couldn't match — part of
+            what supported the Southeast Asia push</td>
+        </tr>
+        <tr>
+          <td class="tool">Power BI</td>
+          <td>Reporting</td>
+          <td>Live CAC, ROAS and conversion dashboards, replacing after-the-fact
+            spreadsheet reporting</td>
+        </tr>
+        <tr>
+          <td class="tool">Zapier + Canva</td>
+          <td>Content ops</td>
+          <td>Content pipeline running between CRM, creative and channels with far less
+            manual handoff</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="ai-note">
+      The test I use for any AI tool: does it remove a manual step without removing a
+      human decision. Retell AI scores leads; a person still decides who to call back.
+      HeyGen produces the video; the script and compliance language are still mine.
+    </p>
+  </div>
+</section>
+
+<!-- SELECTED WORK -->
+<section id="work">
+  <div class="wrap">
+    <div class="section-tag">Selected work</div>
+    <h2>Campaigns, partnerships and rooms I've been in.</h2>
+    <p class="section-intro">Filter by domain — the range is deliberate.</p>
+
+    <div class="filters" role="group" aria-label="Filter selected work by domain">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="fintech">FinTech</button>
+      <button class="filter-btn" data-filter="edtech">EdTech</button>
+      <button class="filter-btn" data-filter="agritech">Agritech</button>
+      <button class="filter-btn" data-filter="fmcg">FMCG</button>
+      <button class="filter-btn" data-filter="b2b">B2B</button>
+      <button class="filter-btn" data-filter="b2c">B2C</button>
+      <button class="filter-btn" data-filter="government">Government</button>
+    </div>
+
+    <div class="work-grid">
+
+      <article class="work-card" data-domains="fintech b2b government">
+        <img src="images/main-5.jpg" alt="Government project meeting with Members of Parliament">
+        <div class="work-body">
+          <div class="work-no">01</div>
+          <h3>A seat at the government table</h3>
+          <p>Stakeholder meetings with Members of Parliament as part of a government-facing
+            growth initiative — marketing arguments made to policy, not just to customers.</p>
+          <div class="work-domains"><span>Government</span><span>B2B</span></div>
+        </div>
+      </article>
+
+      <article class="work-card" data-domains="fintech edtech b2c b2b">
+        <img src="images/main-6.jpg" alt="GITEX international fintech event">
+        <div class="work-body">
+          <div class="work-no">02</div>
+          <h3>GITEX — global fintech floor</h3>
+          <p>Building authority for a financial-education brand in a room full of the
+            region's fintech decision-makers — brand, not just booth.</p>
+          <div class="work-domains"><span>FinTech</span><span>B2B</span></div>
+        </div>
+      </article>
+
+      <article class="work-card" data-domains="agritech b2b">
+        <img src="images/main-7.jpg" alt="Export collaboration with the Canada Trade Commissioner">
+        <div class="work-body">
+          <div class="work-no">03</div>
+          <h3>An export line to Canada</h3>
+          <p>Working directly with the Trade Commissioner and the Canadian Embassy to build
+            an export and distribution relationship for the agri brand.</p>
+          <div class="work-domains"><span>Agritech</span><span>B2B</span></div>
+        </div>
+      </article>
+
+      <article class="work-card" data-domains="agritech b2b">
+        <img src="images/main-12.jpg" alt="B2B collaboration with Barrix Agro Science">
+        <div class="work-body">
+          <div class="work-no">04</div>
+          <h3>Barrix Agro Science</h3>
+          <p>A co-marketing partnership with a funded agritech company — two brands, one
+            shared distribution story.</p>
+          <div class="work-domains"><span>Agritech</span><span>B2B</span></div>
+        </div>
+      </article>
+
+      <article class="work-card" data-domains="fmcg agritech b2c">
+        <img src="images/main-17.jpg" alt="Product launch, ATL and BTL campaign">
+        <div class="work-body">
+          <div class="work-no">05</div>
+          <h3>15+ GTM launches, one playbook</h3>
+          <p>ATL and BTL working together — TV and billboards for reach, digital for
+            conversion — repeated across more than fifteen product launches.</p>
+          <div class="work-domains"><span>FMCG</span><span>B2C</span></div>
+        </div>
+      </article>
+
+      <article class="work-card" data-domains="fintech edtech b2c">
+        <img src="images/main-3.jpg" alt="Team discussion on the forex education strategy">
+        <div class="work-body">
+          <div class="work-no">06</div>
+          <h3>Rebuilding the funnel at Primexar</h3>
+          <p>Seven months from guesswork to a fully tracked, CRM-led acquisition funnel for
+            a global student base.</p>
+          <div class="work-domains"><span>FinTech</span><span>B2C</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ALBUM -->
+<section>
+  <div class="wrap">
+    <div class="section-tag">Field notes</div>
+    <h2>More rooms, more work.</h2>
+
+    <div class="album">
+      <figure><img src="images/main-4.jpg" alt="Professional event"><figcaption>Event floor</figcaption></figure>
+      <figure><img src="images/main-8.jpg" alt="Professional interaction"><figcaption>Partner meeting</figcaption></figure>
+      <figure><img src="images/main-9.jpg" alt="Marketing and business event"><figcaption>Campaign review</figcaption></figure>
+      <figure><img src="images/main-10.jpg" alt="Leadership event"><figcaption>Leadership briefing</figcaption></figure>
+      <figure><img src="images/main-11.jpg" alt="Team discussion"><figcaption>Team working session</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- CHARAN BUILDS / INSTAGRAM -->
+<section>
+  <div class="wrap">
+    <div class="press">
+      <div class="press-photo">
+        <img src="images/main-13.jpg" alt="Charan Builds — financial education content">
+      </div>
+      <div>
+        <div class="section-tag">Also building</div>
+        <h3>Charan Builds — finance and markets, explained</h3>
+        <p>
+          Outside the day job, I write and script financial-education content on
+          Instagram — currency markets, generational purchasing power, the yen carry
+          trade, and how macro forces actually move a household budget. Same instinct
+          as the day job: take something dense and make it land.
+        </p>
+        <a class="btn solid" href="https://www.instagram.com/charan09_builds/" target="_blank" rel="noopener">
+          Follow @charan09_builds
+        </a>
+        <div style="margin-top:14px" class="handle">instagram.com/charan09_builds</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section>
+  <div class="wrap">
+    <div class="section-tag">Working stack</div>
+    <h2>Tools this runs on.</h2>
+    <div class="tool-strip">
+      <span>Google Ads</span><span>Meta Ads</span><span>LinkedIn</span><span>YouTube</span>
+      <span>Zoho CRM</span><span>SQL</span><span>Power BI</span><span>WhatsApp Business API</span>
+      <span>Zapier</span><span>HeyGen</span><span>ElevenLabs</span><span>Retell AI</span>
+      <span>Canva</span><span>SEO</span><span>Google Analytics</span><span>Budget Forecasting</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="section-tag">Contact</div>
+        <h2>Working on something that needs this? Let's talk.</h2>
+      </div>
+      <div class="contact-details">
+        Email — <a href="mailto:charan.shankar09@gmail.com">charan.shankar09@gmail.com</a><br>
+        Phone (IN) — <a href="tel:+918197307148">+91 81973 07148</a><br>
+        Phone (UAE) — <a href="tel:+971542191453">+971 54 219 1453</a><br>
+        Instagram — <a href="https://www.instagram.com/charan09_builds/" target="_blank" rel="noopener">@charan09_builds</a><br>
+        Based in — Dubai &amp; Bangalore
+      </div>
+    </div>
+    <div class="foot-meta">
+      <span>R. Charan Shankar Naidu — MBA Marketing, Jain University</span>
+      <span>English · Kannada · Telugu · Hindi</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Domain filter for Selected Work
+  (function(){
+    var buttons = document.querySelectorAll('.filter-btn');
+    var cards = document.querySelectorAll('.work-card');
+
+    buttons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        buttons.forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        var filter = btn.getAttribute('data-filter');
+
+        cards.forEach(function(card){
+          var domains = card.getAttribute('data-domains') || '';
+          if (filter === 'all' || domains.indexOf(filter) !== -1) {
+            card.classList.remove('hide');
+          } else {
+            card.classList.add('hide');
+          }
+        });
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
