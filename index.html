@@ -98,7 +98,7 @@ body.ready .hero h1 .w>span{transform:none}
 .pill.dark{background:var(--ink);color:#fff}
 .pill.dark:hover{background:#000}
 .pill .av{width:38px;height:38px;border-radius:50%;overflow:hidden;border:2px solid #fff}
-.pill .av{background:#E8EAEC}.pill .av img{width:100%;height:100%;object-fit:cover;object-position:52% 28%;transform:scale(2.2);transform-origin:52% 28%}
+.pill .av{background:#E8EAEC}.pill .av img{width:100%;height:100%;object-fit:cover;object-position:44% 30%;transform:scale(1.7);transform-origin:44% 30%}
 .pill.light{background:#ECEEF0;padding:14px 24px}
 .pill.light:hover{background:var(--lime)}
 .hero-art{position:relative;height:min(78svh,720px);min-height:420px;transform-style:preserve-3d;will-change:transform}
@@ -112,6 +112,28 @@ body.ready .hero-tag{opacity:1;transform:none}
 .scrollhint i:after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--ink);animation:drip 1.8s infinite var(--ease)}
 @keyframes drip{to{top:110%}}
 
+#particles{z-index:2}
+.blob{position:absolute;left:18%;top:10%;width:64%;aspect-ratio:1;z-index:1;background:radial-gradient(circle at 35% 30%,#ECFF66 0%,var(--lime) 45%,#B9E000 100%);border-radius:58% 42% 46% 54%/50% 56% 44% 50%;animation:morph 12s ease-in-out infinite;box-shadow:0 40px 90px -30px rgba(170,215,0,.75)}
+@keyframes morph{50%{border-radius:42% 58% 60% 40%/56% 44% 56% 44%;transform:rotate(8deg) scale(1.03)}}
+.dotgrid{position:absolute;z-index:1;right:4%;bottom:30%;width:120px;height:90px;background-image:radial-gradient(var(--ink) 1.4px,transparent 1.6px);background-size:14px 14px;opacity:.22}
+.ring{position:absolute;z-index:3;right:2%;top:2%;width:118px;height:118px;animation:spin 18s linear infinite}
+.ring text{font-family:var(--fh);font-weight:700;font-size:10.2px;letter-spacing:2.4px;fill:var(--ink)}
+.ring circle,.ring path{transform-origin:60px 60px;animation:spin 18s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spark{position:absolute;z-index:3;width:22px;height:22px;background:var(--lime);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);animation:twinkle 3.2s ease-in-out infinite}
+.spark.s1{left:12%;top:12%}.spark.s2{right:24%;top:46%;width:14px;height:14px;animation-delay:1.1s;background:var(--ink)}.spark.s3{left:30%;bottom:6%;width:16px;height:16px;animation-delay:2s}
+@keyframes twinkle{50%{transform:scale(.55) rotate(45deg);opacity:.6}}
+.hchip{position:absolute;z-index:4;will-change:transform;transition:transform .2s linear}
+.hchip .in{display:flex;flex-direction:column;padding:12px 18px;border-radius:16px;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);box-shadow:0 22px 44px -22px rgba(0,0,0,.35);animation:bob 5s ease-in-out infinite;opacity:0;transform:translateY(16px) scale(.9);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+body.ready .hchip .in{opacity:1;transform:none}
+.hchip strong{font-family:var(--fh);font-weight:700;font-size:30px;line-height:1;color:var(--ink)}
+.hchip span{font-size:12px;color:var(--muted);margin-top:4px;white-space:nowrap}
+.hchip.c1 .in{background:var(--lime);border-color:transparent}.hchip.c1 span{color:var(--ink2)}
+.hchip.c4 .in{background:var(--ink);border-color:transparent}.hchip.c4 strong{color:var(--lime)}.hchip.c4 span{color:rgba(255,255,255,.75)}
+.hchip.c1{left:-4%;top:14%}.hchip.c2{right:-3%;top:36%}.hchip.c3{left:-6%;bottom:26%}.hchip.c4{right:0;bottom:8%}.hchip.c5{left:22%;top:-1%}
+.hchip.c2 .in{animation-delay:-1.2s;transition-delay:1.25s}.hchip.c3 .in{animation-delay:-2.4s;transition-delay:1.4s}.hchip.c4 .in{animation-delay:-3.1s;transition-delay:1.55s}.hchip.c5 .in{animation-delay:-.6s;transition-delay:1.7s}.hchip.c1 .in{transition-delay:1.1s}
+@keyframes bob{50%{translate:0 -10px}}
+@media (max-width:860px){.hchip strong{font-size:22px}.hchip .in{padding:9px 13px}.hchip.c3,.hchip.c5{display:none}.hchip.c1{left:0}.hchip.c2{right:0}.ring{width:84px;height:84px}}
 /* ---------- marquee ---------- */
 .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:26px 0;position:relative;z-index:1;background:var(--bg)}
 .marquee:before,.marquee:after{content:"";position:absolute;top:0;bottom:0;width:120px;z-index:2}
@@ -410,8 +432,15 @@ body.scrolled .float{transform:none}
     </div>
   </div>
   <div class="hero-art">
+    <div class="blob" aria-hidden="true"></div>
     <canvas id="particles" aria-label="Portrait of Charan that follows your cursor"></canvas>
-    <div class="hero-tag"><strong>₹50 Cr</strong>revenue scaled at Irra Agrotech</div>
+    <svg class="ring" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="rp" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#rp">MARKETING · GROWTH · CRM · AI · BRAND · </textPath></text><circle cx="60" cy="60" r="20" fill="var(--lime)"/><path d="M53 67 67 53M56 53h11v11" stroke="#121212" stroke-width="2.2" fill="none"/></svg>
+    <i class="spark s1" aria-hidden="true"></i><i class="spark s2" aria-hidden="true"></i><i class="spark s3" aria-hidden="true"></i><i class="dotgrid" aria-hidden="true"></i>
+    <div class="hchip c1" data-d="26"><div class="in"><strong>8L+</strong><span>Social audience built</span></div></div>
+    <div class="hchip c2" data-d="-20"><div class="in"><strong>₹50 Cr</strong><span>Revenue scaled</span></div></div>
+    <div class="hchip c3" data-d="16"><div class="in"><strong>15+</strong><span>GTM launches</span></div></div>
+    <div class="hchip c4" data-d="-28"><div class="in"><strong>180%</strong><span>YoY online sales</span></div></div>
+    <div class="hchip c5" data-d="12"><div class="in"><strong>10+</strong><span>Years in marketing</span></div></div>
   </div>
   <div class="scrollhint"><i></i>Scroll to explore</div>
 </section>
@@ -765,9 +794,9 @@ lb.addEventListener('click',e=>{if(e.target===lb)close()});
 addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(li-1);if(e.key==='ArrowRight')show(li+1)});
 
 /* ---- silhouette portrait: follows the cursor, blurs, glitches and dissolves ---- */
-const cv=$('#particles'),ctx=cv.getContext('2d'),art=cv.parentElement;
+const cv=$('#particles'),ctx=cv.getContext('2d'),art=cv.parentElement,chips=$$('.hchip');
 const img=new Image();img.src='images/charan-cutout.webp';
-const NECK=.56, HEADX=.52; // neck line as a fraction of the cutout height
+const NECK=.72, HEADX=.44; // neck line as a fraction of the cutout height
 let W=0,H=0,dpr=1,fx=0,fy=0,fw=0,fh=0,head,body,full,redL,blueL,edge=[],P=[];
 let tx=0,ty=0,sx=0,sy=0,px=0,py=0,vel=0,glitchT=0,slices=[],running=true,idleT=0,lastMove=0;
 function layer(){const c=document.createElement('canvas');c.width=W*dpr;c.height=H*dpr;const g=c.getContext('2d');g.setTransform(dpr,0,0,dpr,0,0);return[c,g]}
@@ -840,6 +869,7 @@ function frame(t){
     ctx.fillStyle=p.lime?`rgba(190,235,0,${a})`:`rgba(60,64,70,${a*.85})`;ctx.fillRect(p.x,p.y,p.r,p.r)}
   // blur when the cursor whips across
   cv.style.filter=vel>.6?`blur(${Math.min(5,(vel-.6)*3).toFixed(2)}px)`:'none';
+  for(const c of chips){const d=+c.dataset.d;c.style.transform=`translate(${(sx*d).toFixed(1)}px,${(sy*d*.6).toFixed(1)}px)`}
   art.style.transform=`perspective(1200px) rotateY(${(sx*7).toFixed(2)}deg) rotateX(${(-sy*4).toFixed(2)}deg)`;
 }
 new IntersectionObserver(es=>{running=es[0].isIntersecting}).observe(cv);
