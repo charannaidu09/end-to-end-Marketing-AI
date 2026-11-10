@@ -7,7 +7,7 @@
 <meta name="description" content="Marketing leader with 10+ years across performance marketing, brand, CRM, GTM and AI-powered marketing systems in EdTech, FinTech, FMCG and Agritech.">
 <meta property="og:title" content="R. Charan Shankar Naidu | Marketing & Growth">
 <meta property="og:description" content="Building marketing that moves people and numbers.">
-<meta property="og:image" content="images/main-2.jpg">
+<meta property="og:image" content="images/charan-cutout.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
@@ -98,13 +98,13 @@ body.ready .hero h1 .w>span{transform:none}
 .pill.dark{background:var(--ink);color:#fff}
 .pill.dark:hover{background:#000}
 .pill .av{width:38px;height:38px;border-radius:50%;overflow:hidden;border:2px solid #fff}
-.pill .av img{width:100%;height:100%;object-fit:cover;object-position:59% 24%;transform:scale(2.6);transform-origin:59% 24%}
+.pill .av{background:#E8EAEC}.pill .av img{width:100%;height:100%;object-fit:cover;object-position:44% 30%;transform:scale(1.7);transform-origin:44% 30%}
 .pill.light{background:#ECEEF0;padding:14px 24px}
 .pill.light:hover{background:var(--lime)}
 .hero-art{position:relative;height:min(78svh,720px);min-height:420px;transform-style:preserve-3d;will-change:transform}
 .hero-art:before{content:"";position:absolute;left:-14%;right:-14%;bottom:-6%;height:75%;background:radial-gradient(ellipse 55% 70% at 50% 100%,rgba(213,254,0,.85) 0%,rgba(213,254,0,.35) 45%,rgba(213,254,0,0) 75%);pointer-events:none}
 #particles{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y}
-.hero-tag{position:absolute;right:4%;bottom:10%;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:14px 18px;font-size:12.5px;color:var(--muted);box-shadow:0 20px 40px -24px rgba(0,0,0,.3);opacity:0;transform:translateY(20px);transition:all 1s var(--ease) 1.2s}
+.hero-tag{position:absolute;left:-2%;bottom:16%;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:14px 18px;font-size:12.5px;color:var(--muted);box-shadow:0 20px 40px -24px rgba(0,0,0,.3);opacity:0;transform:translateY(20px);transition:all 1s var(--ease) 1.2s}
 body.ready .hero-tag{opacity:1;transform:none}
 .hero-tag strong{display:block;font-family:var(--fh);font-size:30px;line-height:1;color:var(--ink);font-weight:600}
 .scrollhint{position:absolute;left:0;bottom:24px;font-size:11.5px;color:var(--muted);display:flex;align-items:center;gap:10px}
@@ -405,7 +405,7 @@ body.scrolled .float{transform:none}
     </h1>
     <p class="lead">I'm <b>R. Charan Shankar Naidu</b>, with 10+ years turning strategy, data, content and CRM into <b>measurable growth</b> across India, the GCC, the USA and Southeast Asia.</p>
     <div class="btns">
-      <a href="tel:+918197307148" class="pill dark magnet">Book a call with Charan <span class="av"><img src="images/main-2.jpg" alt=""></span></a>
+      <a href="tel:+918197307148" class="pill dark magnet">Book a call with Charan <span class="av"><img src="images/charan-cutout.webp" alt=""></span></a>
       <a href="#work" class="pill light magnet">View work &#8250;&#8250;</a>
     </div>
   </div>
@@ -767,22 +767,25 @@ addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key
 /* ---- silhouette portrait: follows the cursor, blurs, glitches and dissolves ---- */
 const cv=$('#particles'),ctx=cv.getContext('2d'),art=cv.parentElement;
 const img=new Image();img.src='images/charan-cutout.webp';
-const NECK=.37; // neck line as a fraction of the cutout height
-let W=0,H=0,dpr=1,fx=0,fy=0,fw=0,fh=0,head,body,redL,blueL,edge=[],P=[];
+const NECK=.72, HEADX=.44; // neck line as a fraction of the cutout height
+let W=0,H=0,dpr=1,fx=0,fy=0,fw=0,fh=0,head,body,full,redL,blueL,edge=[],P=[];
 let tx=0,ty=0,sx=0,sy=0,px=0,py=0,vel=0,glitchT=0,slices=[],running=true,idleT=0,lastMove=0;
 function layer(){const c=document.createElement('canvas');c.width=W*dpr;c.height=H*dpr;const g=c.getContext('2d');g.setTransform(dpr,0,0,dpr,0,0);return[c,g]}
 function build(){
   const r=cv.getBoundingClientRect();W=r.width;H=r.height;dpr=Math.min(devicePixelRatio||1,2);
   cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
-  const s=Math.min(W*.92/img.naturalWidth,H*.96/img.naturalHeight);fw=img.naturalWidth*s;fh=img.naturalHeight*s;fx=(W-fw)/2;fy=H-fh;
+  const s=Math.min(W*1.25/img.naturalWidth,H*.96/img.naturalHeight);fw=img.naturalWidth*s;fh=img.naturalHeight*s;fx=(W-fw)/2;fy=H-fh;
   // dark figure with a lime fade from the bottom
   const[fig,g]=layer();
-  g.drawImage(img,fx,fy,fw,fh);
+  g.filter='grayscale(1) contrast(1.12) brightness(.9)';g.drawImage(img,fx,fy,fw,fh);g.filter='none';
   g.globalCompositeOperation='source-atop';
-  g.fillStyle='rgba(26,28,32,.9)';g.fillRect(0,0,W,H);
-  const gr=g.createLinearGradient(0,fy+fh*.45,0,H);gr.addColorStop(0,'rgba(213,254,0,0)');gr.addColorStop(1,'rgba(200,245,0,.92)');
+  const gr=g.createLinearGradient(0,fy+fh*.7,0,H);gr.addColorStop(0,'rgba(213,254,0,0)');gr.addColorStop(1,'rgba(200,245,0,.9)');
   g.fillStyle=gr;g.fillRect(0,0,W,H);
   for(let i=0;i<fw*fh/90;i++){const x=fx+Math.random()*fw,y=fy+Math.random()*fh;g.fillStyle=Math.random()<.5?'rgba(255,255,255,.10)':'rgba(213,254,0,.16)';g.fillRect(x,y,1,1)}
+  // fade the cropped shoulders out at the sides
+  g.globalCompositeOperation='destination-in';
+  const side=g.createLinearGradient(Math.max(fx,0),0,Math.min(fx+fw,W),0);side.addColorStop(0,'rgba(0,0,0,0)');side.addColorStop(.12,'#000');side.addColorStop(.88,'#000');side.addColorStop(1,'rgba(0,0,0,0)');
+  g.fillStyle=side;g.fillRect(0,0,W,H);
   g.globalCompositeOperation='source-over';
   // split into head and body with a soft seam at the neck
   const ny=fy+fh*NECK,feather=fh*.05;
@@ -790,7 +793,7 @@ function build(){
   const mk=(top)=>{const[c,gg]=layer();gg.drawImage(fig,0,0,W,H);gg.globalCompositeOperation='destination-in';
     const m=top?gg.createLinearGradient(0,ny,0,ny+feather):gg.createLinearGradient(0,ny-feather,0,ny);m.addColorStop(0,top?'#000':'rgba(0,0,0,0)');m.addColorStop(1,top?'rgba(0,0,0,0)':'#000');
     gg.fillStyle=m;gg.fillRect(0,0,W,H);return c};
-  head=mk(true);body=mk(false);
+  head=mk(true);body=mk(false);full=fig;
   const tint=(col)=>{const[c,gg]=layer();gg.drawImage(fig,0,0,W,H);gg.globalCompositeOperation='source-atop';gg.fillStyle=col;gg.fillRect(0,0,W,H);return c};
   redL=tint('rgba(255,0,60,.9)');blueL=tint('rgba(0,70,255,.9)');
   // right-hand edge points where particles peel away
@@ -819,14 +822,15 @@ function frame(t){
   ctx.save();ctx.translate(W/2,H);ctx.scale(breathe,breathe);ctx.transform(1,0,sx*-.04,1,0,0);ctx.translate(-W/2+sx*8,-H);
   ctx.drawImage(body,0,0,W,H);ctx.restore();
   // head: turns further, with a motion smear when moving fast
-  const hcx=fx+fw*.58,hcy=fy+fh*NECK;
-  const drawHead=(k,a)=>{ctx.save();ctx.globalAlpha=a;ctx.translate(hcx,hcy);ctx.rotate(sx*.07*k);ctx.transform(1-Math.abs(sx)*.07*k,sy*.03*k,sx*-.1*k,1,0,0);ctx.translate(-hcx+sx*22*k,-hcy+sy*12*k);ctx.drawImage(head,0,0,W,H);ctx.restore()};
+  const hcx=fx+fw*HEADX,hcy=fy+fh*NECK;
+  const drawHead=(k,a)=>{ctx.save();ctx.globalAlpha=a;ctx.translate(hcx,hcy);ctx.rotate(sx*.07*k);ctx.transform(1-Math.abs(sx)*.07*k,sy*.03*k,sx*-.1*k,1,0,0);ctx.translate(-hcx+sx*16*k,-hcy+sy*9*k);ctx.drawImage(head,0,0,W,H);ctx.restore()};
   const trail=Math.min(5,vel*2.2|0);
   for(let i=trail;i>0;i--)drawHead(1-i*.09,.16);
   drawHead(1,1);
   // glitch slices with RGB fringe
   if(t<glitchT){for(const s of slices){const y=s.y*dpr,h=s.h*dpr;
-    ctx.drawImage(redL,0,y,cv.width,h,s.dx-5,s.y,W,s.h);ctx.drawImage(blueL,0,y,cv.width,h,s.dx+5,s.y,W,s.h);ctx.drawImage(body,0,y,cv.width,h,s.dx,s.y,W,s.h)}}
+    ctx.clearRect(0,s.y,W,s.h);ctx.globalAlpha=.55;ctx.drawImage(redL,0,y,cv.width,h,s.dx-4,s.y,W,s.h);ctx.drawImage(blueL,0,y,cv.width,h,s.dx+4,s.y,W,s.h);
+    ctx.globalAlpha=1;ctx.drawImage(full,0,y,cv.width,h,s.dx,s.y,W,s.h)}}
   // dissolving particles off the right shoulder and head
   for(let i=0;i<(vel>.5?6:3);i++)spawn();
   for(let i=P.length-1;i>=0;i--){const p=P[i];p.life++;
