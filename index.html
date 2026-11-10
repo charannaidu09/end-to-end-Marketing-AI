@@ -894,7 +894,8 @@ addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key
 
 /* ---- silhouette portrait: follows the cursor, blurs, glitches and dissolves ---- */
 const cv=$('#particles'),ctx=cv.getContext('2d'),art=cv.parentElement,chips=$$('.hchip');
-const img=new Image();img.src='images/charan-hero.webp';
+const HERO='images/charan-hero.webp';const img=new Image();img.crossOrigin='anonymous';let heroRetry=false;
+img.onerror=()=>{if(heroRetry)return;heroRetry=true;img.removeAttribute('crossorigin');img.src=HERO+'?v=2'};img.src=HERO;
 const NECK=.345, HEADX=.41; // neck line as a fraction of the cutout height
 let W=0,H=0,dpr=1,fx=0,fy=0,fw=0,fh=0,head,body,full,redL,blueL,edge=[],P=[];
 let tx=0,ty=0,sx=0,sy=0,px=0,py=0,vel=0,glitchT=0,slices=[],running=true,idleT=0,lastMove=0;
@@ -925,9 +926,9 @@ function build(){
   const tint=(col)=>{const[c,gg]=layer();gg.drawImage(fig,0,0,W,H);gg.globalCompositeOperation='source-atop';gg.fillStyle=col;gg.fillRect(0,0,W,H);return c};
   redL=tint('rgba(213,254,0,.95)');blueL=tint('rgba(18,18,18,.9)');
   // right-hand edge points where particles peel away
-  const d=g.getImageData(0,0,fig.width,fig.height).data,step=Math.round(3*dpr);edge=[];
+  edge=[];try{const d=g.getImageData(0,0,fig.width,fig.height).data,step=Math.round(3*dpr);
   for(let y=Math.round((fy+fh*.08)*dpr);y<fig.height-step;y+=step){
-    for(let x=fig.width-1;x>fig.width*.45;x-=step){if(d[(y*fig.width+x)*4+3]>120){edge.push([x/dpr,y/dpr]);break}}}
+    for(let x=fig.width-1;x>fig.width*.45;x-=step){if(d[(y*fig.width+x)*4+3]>120){edge.push([x/dpr,y/dpr]);break}}}}catch(e){edge=[]}
   P=[];
 }
 function spawn(){if(!edge.length)return;const e=edge[Math.random()*edge.length|0];
