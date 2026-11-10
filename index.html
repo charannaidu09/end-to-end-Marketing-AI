@@ -1,1107 +1,832 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="R. Charan Shankar Naidu — Marketing Manager. 10+ years across performance marketing, B2C and B2B growth, CRM, brand and AI-driven marketing operations, spanning EdTech, FinTech, FMCG and Agritech.">
-<title>R. Charan Shankar Naidu — Marketing &amp; Growth</title>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>R. Charan Shankar Naidu — Marketing & Growth</title>
+<meta name="description" content="Marketing leader with 10+ years across performance marketing, brand, CRM, GTM and AI-powered marketing systems in EdTech, FinTech, FMCG and Agritech.">
+<meta property="og:title" content="R. Charan Shankar Naidu — Marketing & Growth">
+<meta property="og:description" content="Building marketing that moves people and numbers.">
+<meta property="og:image" content="images/main-2.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --paper:#E9E2D0;
-    --paper-light:#F3EFE2;
-    --paper-deep:#DFD6BE;
-    --ink:#20261F;
-    --ink-soft:#565F53;
-    --ink-faint:#8C9186;
-    --rule:#C6BC9E;
-    --green:#2F6B4C;
-    --green-deep:#1F4A34;
-    --rust:#A44430;
-    --max:1160px;
-  }
-
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'IBM Plex Sans', Arial, sans-serif;
-    font-size:16px;
-    line-height:1.62;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  a{ color:inherit; }
-  img{ max-width:100%; display:block; }
-
-  .serif{ font-family:'Fraunces', Georgia, serif; }
-  .mono{ font-family:'IBM Plex Mono', monospace; }
-
-  .wrap{ width:min(92%, var(--max)); margin:0 auto; }
-
-  ::selection{ background:var(--green); color:var(--paper-light); }
-
-  a:focus-visible,
-  button:focus-visible{
-    outline:2px solid var(--rust);
-    outline-offset:3px;
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
-  }
-
-  /* ===== MASTHEAD ===== */
-
-  .masthead{
-    border-bottom:1px solid var(--ink);
-    background:var(--paper);
-    position:sticky;
-    top:0;
-    z-index:50;
-  }
-
-  .masthead-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:14px 0;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    letter-spacing:.02em;
-    color:var(--ink-soft);
-    border-bottom:1px solid var(--rule);
-  }
-
-  .masthead-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:16px 0;
-  }
-
-  .wordmark{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size:22px;
-    letter-spacing:-.01em;
-  }
-
-  .navlinks{
-    display:flex;
-    gap:26px;
-    font-size:14px;
-  }
-
-  .navlinks a{
-    text-decoration:none;
-    border-bottom:1px solid transparent;
-    padding-bottom:2px;
-  }
-
-  .navlinks a:hover{ border-bottom-color:var(--ink); }
-
-  .nav-toggle{ display:none; }
-
-  /* ===== TICKER ===== */
-
-  .ticker{
-    border-bottom:1px solid var(--ink);
-    background:var(--ink);
-    color:var(--paper-light);
-    overflow:hidden;
-    white-space:nowrap;
-    padding:9px 0;
-  }
-
-  .ticker-track{
-    display:inline-flex;
-    gap:48px;
-    padding-left:100%;
-    animation:ticker 38s linear infinite;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12.5px;
-    letter-spacing:.02em;
-  }
-
-  .ticker-track span{ opacity:.92; }
-  .ticker-track .up{ color:#8FD6AB; }
-
-  @keyframes ticker{
-    from{ transform:translateX(0); }
-    to{ transform:translateX(-100%); }
-  }
-
-  /* ===== HERO ===== */
-
-  .hero{ padding:64px 0 56px; }
-
-  .hero-grid{
-    display:grid;
-    grid-template-columns:1.15fr .85fr;
-    gap:64px;
-    align-items:start;
-  }
-
-  .dateline{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12.5px;
-    color:var(--ink-soft);
-    margin-bottom:18px;
-  }
-
-  h1{
-    font-family:'Fraunces', serif;
-    font-weight:400;
-    font-size:clamp(34px,4.6vw,54px);
-    line-height:1.08;
-    letter-spacing:-.015em;
-    margin:0 0 22px;
-    max-width:15ch;
-  }
-
-  h1 em{
-    font-style:italic;
-    font-weight:500;
-    color:var(--green-deep);
-  }
-
-  .hero-lede{
-    font-size:18px;
-    color:var(--ink-soft);
-    max-width:52ch;
-    margin:0 0 28px;
-  }
-
-  .hero-actions{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
-  }
-
-  .btn{
-    display:inline-block;
-    padding:12px 20px;
-    border:1px solid var(--ink);
-    font-size:14px;
-    font-family:'IBM Plex Mono', monospace;
-    text-decoration:none;
-    color:var(--ink);
-    background:transparent;
-  }
-
-  .btn.solid{
-    background:var(--ink);
-    color:var(--paper-light);
-  }
-
-  .btn:hover{ background:var(--ink); color:var(--paper-light); }
-  .btn.solid:hover{ background:var(--green-deep); border-color:var(--green-deep); }
-
-  /* ledger */
-
-  .ledger{
-    border-top:1px solid var(--ink);
-    padding-top:18px;
-  }
-
-  .ledger-title{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    color:var(--ink-soft);
-    margin-bottom:16px;
-  }
-
-  .ledger-row{
-    display:flex;
-    align-items:baseline;
-    gap:8px;
-    padding:9px 0;
-    border-bottom:1px solid var(--rule);
-  }
-
-  .ledger-row:last-child{ border-bottom:1px solid var(--ink); }
-
-  .ledger-row .label{ font-size:14.5px; white-space:nowrap; }
-
-  .ledger-row .fill{
-    flex:1;
-    border-bottom:1px dotted var(--ink-faint);
-    transform:translateY(-4px);
-  }
-
-  .ledger-row .value{
-    font-family:'IBM Plex Mono', monospace;
-    font-weight:500;
-    font-size:15px;
-    white-space:nowrap;
-  }
-
-  /* ===== SECTION shell ===== */
-
-  section{
-    padding:78px 0;
-    border-bottom:1px solid var(--rule);
-  }
-
-  .section-tag{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    color:var(--rust);
-    margin-bottom:10px;
-  }
-
-  h2{
-    font-family:'Fraunces', serif;
-    font-weight:400;
-    font-size:clamp(28px,3.6vw,40px);
-    letter-spacing:-.015em;
-    margin:0 0 16px;
-    max-width:20ch;
-  }
-
-  .section-intro{
-    color:var(--ink-soft);
-    max-width:64ch;
-    font-size:16.5px;
-    margin:0 0 40px;
-  }
-
-  /* ===== COVERAGE / DOMAIN TABLE ===== */
-
-  .coverage-grid{
-    display:grid;
-    grid-template-columns:.85fr 1.15fr;
-    gap:50px;
-  }
-
-  .coverage-copy p{ color:var(--ink-soft); }
-
-  .coverage-copy strong{ color:var(--ink); }
-
-  .domain-table{
-    width:100%;
-    border-collapse:collapse;
-    font-size:14.5px;
-  }
-
-  .domain-table th{
-    text-align:left;
-    font-family:'IBM Plex Mono', monospace;
-    font-weight:500;
-    font-size:12px;
-    color:var(--ink-soft);
-    padding:0 0 12px;
-    border-bottom:1px solid var(--ink);
-  }
-
-  .domain-table td{
-    padding:14px 10px 14px 0;
-    border-bottom:1px solid var(--rule);
-    vertical-align:top;
-  }
-
-  .domain-table tr:last-child td{ border-bottom:1px solid var(--ink); }
-
-  .domain-table td.dtag{
-    font-family:'IBM Plex Mono', monospace;
-    font-weight:500;
-    color:var(--green-deep);
-    white-space:nowrap;
-    width:1%;
-  }
-
-  .domain-table td.dwhere{
-    color:var(--ink-faint);
-    white-space:nowrap;
-    width:1%;
-    padding-right:18px;
-  }
-
-  /* ===== EXPERIENCE ===== */
-
-  .role{
-    display:grid;
-    grid-template-columns:190px 1fr;
-    gap:36px;
-    padding:34px 0;
-    border-top:1px solid var(--rule);
-  }
-
-  .role:first-child{ border-top:none; }
-
-  .role-date{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:13px;
-    color:var(--ink-soft);
-    padding-top:3px;
-  }
-
-  .role h3{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size:24px;
-    margin:0 0 4px;
-  }
-
-  .role .company{
-    color:var(--rust);
-    font-size:14.5px;
-    margin-bottom:16px;
-  }
-
-  .role ul{
-    margin:0;
-    padding-left:18px;
-    color:var(--ink-soft);
-  }
-
-  .role li{ margin:8px 0; }
-
-  .role li b{ color:var(--ink); font-weight:600; }
-
-  .role-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
-
-  .role-tags span{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    border:1px solid var(--rule);
-    padding:4px 9px;
-    color:var(--ink-soft);
-  }
-
-  /* ===== AI TABLE ===== */
-
-  .ai-table{ width:100%; border-collapse:collapse; font-size:14.5px; }
-
-  .ai-table th{
-    text-align:left;
-    font-family:'IBM Plex Mono', monospace;
-    font-weight:500;
-    font-size:12px;
-    color:var(--ink-soft);
-    padding:0 14px 12px 0;
-    border-bottom:1px solid var(--ink);
-  }
-
-  .ai-table td{
-    padding:16px 14px 16px 0;
-    border-bottom:1px solid var(--rule);
-    vertical-align:top;
-    color:var(--ink-soft);
-  }
-
-  .ai-table tr:last-child td{ border-bottom:1px solid var(--ink); }
-
-  .ai-table td.tool{
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--ink);
-    font-weight:500;
-    white-space:nowrap;
-  }
-
-  .ai-note{
-    margin-top:26px;
-    padding:20px 22px;
-    background:var(--paper-light);
-    border-left:2px solid var(--green);
-    font-size:15px;
-    color:var(--ink-soft);
-    max-width:70ch;
-  }
-
-  /* ===== WORK / FILTER ===== */
-
-  .filters{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-bottom:36px;
-    border-top:1px solid var(--ink);
-    border-bottom:1px solid var(--ink);
-    padding:16px 0;
-  }
-
-  .filter-btn{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12.5px;
-    padding:8px 14px;
-    border:1px solid var(--ink-faint);
-    background:transparent;
-    color:var(--ink-soft);
-    cursor:pointer;
-  }
-
-  .filter-btn.active,
-  .filter-btn:hover{
-    background:var(--ink);
-    color:var(--paper-light);
-    border-color:var(--ink);
-  }
-
-  .work-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:2px;
-    background:var(--ink);
-    border:1px solid var(--ink);
-  }
-
-  .work-card{
-    background:var(--paper-light);
-    display:flex;
-    flex-direction:column;
-    transition:opacity .25s ease;
-  }
-
-  .work-card.hide{ display:none; }
-
-  .work-card img{
-    width:100%;
-    aspect-ratio:4/3;
-    object-fit:cover;
-    filter:grayscale(.15) contrast(1.03);
-  }
-
-  .work-body{ padding:22px; flex:1; display:flex; flex-direction:column; }
-
-  .work-no{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    color:var(--rust);
-    margin-bottom:8px;
-  }
-
-  .work-body h3{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size:19px;
-    margin:0 0 8px;
-  }
-
-  .work-body p{
-    color:var(--ink-soft);
-    font-size:14px;
-    margin:0 0 14px;
-    flex:1;
-  }
-
-  .work-domains{ display:flex; flex-wrap:wrap; gap:6px; }
-
-  .work-domains span{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:10.5px;
-    color:var(--ink-faint);
-    border:1px solid var(--rule);
-    padding:3px 7px;
-  }
-
-  /* ===== ALBUM ===== */
-
-  .album{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:2px;
-    background:var(--ink);
-    border:1px solid var(--ink);
-  }
-
-  .album figure{ margin:0; background:var(--paper-light); }
-
-  .album img{
-    width:100%;
-    aspect-ratio:1/1;
-    object-fit:cover;
-    filter:grayscale(.2);
-  }
-
-  .album figcaption{
-    padding:10px 12px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    color:var(--ink-soft);
-  }
-
-  /* ===== INSTAGRAM / CHARAN BUILDS ===== */
-
-  .press{
-    display:grid;
-    grid-template-columns:.9fr 1.1fr;
-    gap:50px;
-    align-items:center;
-    background:var(--paper-deep);
-    padding:44px;
-    border:1px solid var(--ink);
-  }
-
-  .press-photo{ border:1px solid var(--ink); overflow:hidden; }
-
-  .press-photo img{
-    aspect-ratio:1/1;
-    object-fit:cover;
-    filter:grayscale(.15);
-  }
-
-  .press h3{
-    font-family:'Fraunces', serif;
-    font-size:26px;
-    font-weight:500;
-    margin:0 0 14px;
-  }
-
-  .press p{ color:var(--ink-soft); margin:0 0 22px; max-width:52ch; }
-
-  .press .handle{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:13px;
-    color:var(--green-deep);
-  }
-
-  /* ===== TOOLS strip ===== */
-
-  .tool-strip{
-    display:flex;
-    flex-wrap:wrap;
-    gap:0;
-    border-top:1px solid var(--ink);
-    border-left:1px solid var(--ink);
-  }
-
-  .tool-strip span{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:13px;
-    padding:12px 18px;
-    border-right:1px solid var(--ink);
-    border-bottom:1px solid var(--ink);
-  }
-
-  /* ===== FOOTER / CONTACT ===== */
-
-  .footer{ padding:70px 0 46px; border-bottom:none; }
-
-  .contact-grid{
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:50px;
-    align-items:end;
-    padding-bottom:40px;
-    border-bottom:1px solid var(--ink);
-    margin-bottom:26px;
-  }
-
-  .contact-grid h2{ max-width:14ch; }
-
-  .contact-details{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:14px;
-    color:var(--ink-soft);
-    line-height:2.1;
-  }
-
-  .contact-details a{
-    text-decoration:none;
-    border-bottom:1px solid var(--ink-faint);
-  }
-
-  .contact-details a:hover{ border-bottom-color:var(--ink); }
-
-  .foot-meta{
-    display:flex;
-    justify-content:space-between;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    color:var(--ink-faint);
-    flex-wrap:wrap;
-    gap:10px;
-  }
-
-  /* ===== RESPONSIVE ===== */
-
-  @media (max-width:900px){
-    .hero-grid,
-    .coverage-grid,
-    .press,
-    .contact-grid{ grid-template-columns:1fr; }
-
-    .work-grid{ grid-template-columns:repeat(2,1fr); }
-    .album{ grid-template-columns:repeat(3,1fr); }
-    .navlinks{ display:none; }
-    .role{ grid-template-columns:1fr; gap:8px; }
-  }
-
-  @media (max-width:560px){
-    .work-grid{ grid-template-columns:1fr; }
-    .album{ grid-template-columns:repeat(2,1fr); }
-    .masthead-top{ flex-direction:column; align-items:flex-start; gap:4px; }
-    section{ padding:56px 0; }
-    .press{ padding:26px; }
-  }
+:root{
+  --bg:#F7F8F9; --bg2:#F0F2F4; --card:#FFFFFF; --ink:#121212; --ink2:#2A2D31;
+  --muted:#7C8085; --soft:#B9BDC2; --line:#E2E5E9; --lime:#D5FE00; --lime2:#A8D400;
+  --dark:#0E0F10; --dark2:#17191B;
+  --r:22px; --gut:clamp(16px,3vw,40px); --max:1360px;
+  --fh:"Rajdhani","Arial Narrow",sans-serif; --fb:"Inter","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--lime);color:var(--ink)}
+.h{font-family:var(--fh);font-weight:600;letter-spacing:-.01em;line-height:1.02}
+
+/* ---------- frame lines ---------- */
+.frame{position:fixed;inset:0;pointer-events:none;z-index:0}
+.frame:before,.frame:after{content:"";position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
+.frame:before{left:var(--gut)}.frame:after{right:var(--gut)}
+.wrap{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:0 calc(var(--gut) + clamp(8px,3vw,48px))}
+.sec{position:relative;border-top:1px solid var(--line);padding:clamp(80px,12vw,150px) 0}
+.sec>.x{position:absolute;top:-6px;width:11px;height:11px;z-index:2}
+.sec>.x:before,.sec>.x:after{content:"";position:absolute;background:var(--soft)}
+.sec>.x:before{left:5px;top:0;width:1px;height:11px}.sec>.x:after{top:5px;left:0;height:1px;width:11px}
+.sec>.x.l{left:calc(var(--gut) - 5px)}.sec>.x.r{right:calc(var(--gut) - 5px)}
+
+/* ---------- preloader ---------- */
+.loader{position:fixed;inset:0;z-index:100;background:var(--dark);color:#fff;display:flex;align-items:flex-end;justify-content:space-between;padding:var(--gut);transition:transform 1s var(--ease)}
+.loader.done{transform:translateY(-100%)}
+.loader .lw{font-family:var(--fh);font-size:clamp(14px,1.4vw,18px);letter-spacing:.5em;opacity:.7}
+.loader .lc{font-family:var(--fh);font-weight:600;font-size:clamp(80px,16vw,220px);line-height:.8;color:var(--lime)}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:14px;left:50%;transform:translate(-50%,-140%);width:min(960px,calc(100% - 2*var(--gut) - 16px));z-index:50;transition:transform .9s var(--ease) .2s}
+body.ready .nav{transform:translate(-50%,0)}
+.nav-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--dark);color:#fff;border-radius:999px;padding:8px 8px 8px 26px;position:relative;z-index:2;box-shadow:0 10px 30px -12px rgba(0,0,0,.45)}
+.logo{display:flex;flex-direction:column;align-items:center;line-height:1}
+.logo b{font-family:var(--fh);font-weight:500;font-size:24px;letter-spacing:.32em;margin-right:-.32em}
+.logo b i{font-style:normal;color:var(--lime)}
+.logo small{font-family:var(--fh);font-size:8.5px;letter-spacing:.78em;margin-right:-.78em;opacity:.8;margin-top:4px}
+.nav-links{display:flex;gap:26px;font-size:14.5px}
+.nav-links a{position:relative;opacity:.86;transition:opacity .3s}
+.nav-links a:hover{opacity:1}
+.nav-links a:after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:var(--lime);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.nav-links a:hover:after{transform:scaleX(1);transform-origin:left}
+.cta{position:relative;display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--ink);overflow:hidden;isolation:isolate;
+  background:radial-gradient(120% 140% at 20% 50%,var(--lime) 0%,#B8E600 45%,#283200 100%)}
+.cta:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60px 60px at var(--mx,50%) var(--my,50%),rgba(255,255,255,.75),transparent 70%);opacity:0;transition:opacity .3s}
+.cta:hover:before{opacity:1}
+.cta .chev{display:inline-flex;transition:transform .4s var(--ease)}
+.cta:hover .chev{transform:translateX(4px)}
+.nav-sub{display:flex;justify-content:space-between;align-items:center;gap:12px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);margin:-30px 0 0;padding:38px 24px 10px;border-radius:0 0 24px 24px;font-family:var(--fh);font-weight:500;font-size:13.5px;color:var(--ink2);box-shadow:0 18px 40px -24px rgba(0,0,0,.35);transition:transform .5s var(--ease),opacity .4s}
+.nav.compact .nav-sub{transform:translateY(-36px);opacity:0}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#2BC84D;margin-right:8px;position:relative;top:-1px;box-shadow:0 0 0 0 rgba(43,200,77,.5);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(43,200,77,0)}100%{box-shadow:0 0 0 0 rgba(43,200,77,0)}}
+.burger{display:none;width:44px;height:44px;border-radius:50%;background:#26292C;position:relative}
+.burger span{position:absolute;left:13px;right:13px;height:1.5px;background:#fff;transition:transform .4s var(--ease),top .4s var(--ease)}
+.burger span:first-child{top:18px}.burger span:last-child{top:25px}
+.menu-open .burger span:first-child{top:21.5px;transform:rotate(45deg)}
+.menu-open .burger span:last-child{top:21.5px;transform:rotate(-45deg)}
+.mmenu{position:fixed;inset:0;z-index:45;background:var(--dark);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 calc(var(--gut) + 16px);clip-path:circle(0 at calc(100% - 50px) 40px);transition:clip-path .8s var(--ease)}
+.menu-open .mmenu{clip-path:circle(150% at calc(100% - 50px) 40px)}
+.mmenu a{font-family:var(--fh);font-weight:600;font-size:clamp(40px,11vw,64px);line-height:1.15;display:block}
+.mmenu a:hover{color:var(--lime)}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:20px;padding-top:150px;padding-bottom:60px;position:relative}
+.corner{position:absolute;top:118px;font-size:11.5px;color:var(--muted);letter-spacing:.02em}
+.corner.l{left:0}.corner.r{right:0}
+.eyebrow{font-family:var(--fh);font-weight:500;font-size:16px;color:var(--ink2);display:flex;flex-wrap:wrap;gap:6px 10px;margin-bottom:26px}
+.eyebrow span+span:before{content:"·";margin-right:10px;color:var(--soft)}
+.hero h1{font-size:clamp(42px,5.6vw,82px)}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.06em}
+.hero h1 .w>span{display:inline-block;transform:translateY(105%);transition:transform 1.1s var(--ease)}
+body.ready .hero h1 .w>span{transform:none}
+.hero h1 .g{color:#A4A8AD}
+.hero p.lead{max-width:520px;margin-top:28px;font-size:17px;color:var(--muted)}
+.hero p.lead b{color:var(--ink);font-weight:500}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:38px}
+.pill{display:inline-flex;align-items:center;gap:12px;border-radius:999px;font-size:14.5px;font-weight:500;padding:8px 8px 8px 24px;transition:transform .4s var(--ease),background .3s,color .3s}
+.pill:hover{transform:translateY(-2px)}
+.pill.dark{background:var(--ink);color:#fff}
+.pill.dark:hover{background:#000}
+.pill .av{width:38px;height:38px;border-radius:50%;overflow:hidden;border:2px solid #fff}
+.pill .av img{width:100%;height:100%;object-fit:cover;object-position:59% 24%;transform:scale(2.6);transform-origin:59% 24%}
+.pill.light{background:#ECEEF0;padding:14px 24px}
+.pill.light:hover{background:var(--lime)}
+.hero-art{position:relative;height:min(78svh,720px);min-height:420px}
+#particles{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y}
+.hero-tag{position:absolute;right:4%;bottom:10%;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:14px 18px;font-size:12.5px;color:var(--muted);box-shadow:0 20px 40px -24px rgba(0,0,0,.3);opacity:0;transform:translateY(20px);transition:all 1s var(--ease) 1.2s}
+body.ready .hero-tag{opacity:1;transform:none}
+.hero-tag strong{display:block;font-family:var(--fh);font-size:30px;line-height:1;color:var(--ink);font-weight:600}
+.scrollhint{position:absolute;left:0;bottom:24px;font-size:11.5px;color:var(--muted);display:flex;align-items:center;gap:10px}
+.scrollhint i{display:block;width:1px;height:34px;background:var(--line);position:relative;overflow:hidden}
+.scrollhint i:after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--ink);animation:drip 1.8s infinite var(--ease)}
+@keyframes drip{to{top:110%}}
+
+/* ---------- marquee ---------- */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:26px 0;position:relative;z-index:1;background:var(--bg)}
+.marquee:before,.marquee:after{content:"";position:absolute;top:0;bottom:0;width:120px;z-index:2}
+.marquee:before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+.marquee:after{right:0;background:linear-gradient(-90deg,var(--bg),transparent)}
+.mtrack{display:flex;width:max-content;animation:mq 40s linear infinite}
+.marquee:hover .mtrack{animation-play-state:paused}
+.mtrack span{font-family:var(--fh);font-weight:700;font-size:clamp(22px,2.6vw,32px);color:#BFC3C8;padding:0 34px;white-space:nowrap;display:flex;align-items:center;gap:34px;transition:color .3s}
+.mtrack span:hover{color:var(--ink)}
+.mtrack span:after{content:"";width:8px;height:8px;background:var(--lime);border-radius:2px;transform:rotate(45deg)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- statement (glitch) ---------- */
+.statement{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:end}
+.gtext{font-size:clamp(36px,4.8vw,70px)}
+.gtext .gw{color:#CDD0D4;transition:color .5s}
+.gtext .gw.on{color:var(--ink);animation:glitch .55s steps(2) 1}
+.gtext .gw.on.dim{color:#A4A8AD}
+@keyframes glitch{
+  0%{text-shadow:-4px 0 rgba(255,0,60,.85),4px 0 rgba(0,70,255,.85);transform:translateX(2px)}
+  30%{text-shadow:3px 0 rgba(255,0,60,.8),-3px 0 rgba(0,70,255,.8);transform:translateX(-2px) skewX(-6deg)}
+  60%{text-shadow:-2px 0 rgba(255,0,60,.6),2px 0 rgba(0,70,255,.6);transform:translateX(1px)}
+  100%{text-shadow:none;transform:none}}
+.stmt-side p{color:var(--muted);font-size:16.5px}
+.stmt-side p+p{margin-top:18px}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+
+/* ---------- head row ---------- */
+.label{display:inline-flex;align-items:center;gap:10px;font-size:13px;color:var(--ink2);font-weight:500;margin-bottom:26px}
+.label:before{content:"";width:22px;height:6px;border-radius:3px;background:var(--lime)}
+.headrow{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:end;margin-bottom:60px}
+.headrow h2{font-size:clamp(34px,4.2vw,60px)}
+.headrow h2 .g{color:#A4A8AD}
+.headrow p{color:var(--muted)}
+
+/* ---------- cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{position:relative;background:var(--card);border-radius:var(--r);padding:26px 24px 28px;min-height:360px;display:flex;flex-direction:column;overflow:hidden;border:1px solid transparent;transition:transform .6s var(--ease),border-color .4s,box-shadow .6s var(--ease)}
+.card:hover{transform:translateY(-8px);border-color:var(--line);box-shadow:0 30px 60px -36px rgba(0,0,0,.35)}
+.chip{display:inline-flex;align-self:flex-start;font-size:12px;font-weight:500;padding:5px 12px;border-radius:999px;background:var(--bg2);color:var(--ink2)}
+.card h3{font-size:30px;margin:18px 0 14px}
+.card p{color:var(--muted);font-size:14.5px}
+.card ul{list-style:none;margin-top:auto;padding-top:22px;display:flex;flex-direction:column;gap:7px;font-size:13.5px;color:var(--ink2)}
+.card li{display:flex;gap:10px;align-items:center}
+.card li:before{content:"";width:5px;height:5px;background:var(--ink);border-radius:50%}
+.card .num{position:absolute;right:22px;top:22px;font-family:var(--fh);font-size:14px;color:var(--soft)}
+.card .glow{position:absolute;right:-60px;bottom:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,var(--lime),transparent 65%);opacity:0;transition:opacity .6s,transform .8s var(--ease);transform:scale(.6)}
+.card:hover .glow{opacity:.55;transform:scale(1)}
+
+/* ---------- monolith band ---------- */
+.band{position:relative;height:clamp(260px,40vw,520px);border-radius:var(--r);overflow:hidden;background:var(--dark)}
+.band img{position:absolute;inset:-12% 0;width:100%;height:124%;object-fit:cover;filter:grayscale(1) contrast(1.15) brightness(.7);will-change:transform}
+.band:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,15,16,.9) 0%,rgba(14,15,16,.35) 55%,rgba(213,254,0,.18) 100%)}
+.band .bt{position:absolute;z-index:2;left:clamp(24px,5vw,64px);bottom:clamp(24px,5vw,56px);color:#fff;max-width:640px}
+.band .bt h3{font-size:clamp(30px,4vw,56px)}
+.band .bt h3 em{font-style:normal;color:var(--lime)}
+.band .bt p{color:rgba(255,255,255,.7);margin-top:12px;font-size:15px}
+
+/* ---------- impact ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.stat{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 26px 30px;position:relative;overflow:hidden;transition:background .5s}
+.stat:hover{background:var(--card)}
+.stat .v{font-family:var(--fh);font-weight:600;font-size:clamp(46px,5.4vw,78px);line-height:1;letter-spacing:-.02em}
+.stat .v sup{font-size:.45em;vertical-align:top;position:relative;top:.25em;color:var(--lime2)}
+.stat p{margin-top:12px;color:var(--muted);font-size:14px;max-width:200px}
+.stat .bar{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--lime);transform:scaleX(0);transform-origin:left;transition:transform 1.4s var(--ease)}
+.stat.in .bar{transform:scaleX(1)}
+
+/* ---------- work rows ---------- */
+.works{display:flex;flex-direction:column}
+.work{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,80px);align-items:center;padding:clamp(40px,6vw,80px) 0;border-top:1px solid var(--line)}
+.work:first-child{border-top:0;padding-top:0}
+.work:nth-child(even){grid-template-columns:1.1fr .9fr}
+.work:nth-child(even) .wtext{order:2}
+.wtext .idx{font-family:var(--fh);font-size:14px;color:var(--soft);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.wtext .idx:after{content:"";flex:0 0 60px;height:1px;background:var(--line)}
+.wtext .kicker{font-family:var(--fh);font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.wtext h3{font-size:clamp(30px,3.4vw,46px);margin:10px 0 18px}
+.wtext p{color:var(--muted);font-size:16px;max-width:460px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.tags span{font-size:12.5px;padding:6px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--ink2)}
+.wimg{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;background:var(--bg2);cursor:none}
+.wimg img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;transition:transform 1.2s var(--ease),filter .8s;will-change:transform}
+.wimg:hover img{filter:saturate(1.15)}
+.wimg .arrow{position:absolute;right:20px;bottom:20px;width:54px;height:54px;border-radius:50%;background:#fff;display:grid;place-items:center;transition:transform .5s var(--ease),background .3s;z-index:2}
+.wimg:hover .arrow{transform:rotate(45deg);background:var(--lime)}
+.wimg .cap{position:absolute;left:20px;bottom:20px;z-index:2;color:#fff;font-size:12.5px;padding:6px 12px;border-radius:999px;background:rgba(0,0,0,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.wimg:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(transparent 55%,rgba(0,0,0,.35))}
+.wimg .shade{position:absolute;inset:0;z-index:3;background:var(--bg);transform-origin:top;transition:transform 1.3s var(--ease)}
+.work.in .wimg .shade{transform:scaleY(0)}
+
+/* ---------- audience (dark) ---------- */
+.dark{background:var(--dark);color:#fff;border-radius:calc(var(--r) + 8px);overflow:hidden;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.dark .dl{padding:clamp(32px,5vw,70px);display:flex;flex-direction:column;position:relative;z-index:2}
+.dark .label{color:rgba(255,255,255,.75)}
+.dark h2{font-size:clamp(34px,4vw,58px)}
+.dark h2 em{font-style:normal;color:var(--lime)}
+.dark p{color:rgba(255,255,255,.62);margin-top:18px;max-width:440px}
+.dark .big{font-family:var(--fh);font-weight:600;font-size:clamp(80px,10vw,150px);line-height:.9;margin-top:auto;padding-top:40px;background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,.15));-webkit-background-clip:text;background-clip:text;color:transparent}
+.dark .bigl{color:rgba(255,255,255,.55);font-size:14px;margin-top:8px}
+.platforms{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.platforms span{font-size:12.5px;padding:6px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.85)}
+.dark .dr{position:relative;min-height:560px;background:radial-gradient(80% 70% at 60% 40%,rgba(213,254,0,.22),transparent 70%)}
+.phone{position:absolute;width:44%;aspect-ratio:9/19.5;border-radius:34px;overflow:hidden;border:8px solid #2A2D30;box-shadow:0 40px 80px -30px rgba(0,0,0,.8);background:#000;will-change:transform}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top}
+.phone.p1{left:12%;top:12%;transform:rotate(-6deg)}
+.phone.p2{right:10%;top:22%;transform:rotate(5deg);border-radius:26px;width:40%;aspect-ratio:3/4}
+.phone.p2 img{object-position:center}
+.ig{display:inline-flex;align-items:center;gap:10px;margin-top:26px;align-self:flex-start}
+.ig.pill{background:#fff;color:var(--ink);padding:13px 22px}
+.ig.pill:hover{background:var(--lime)}
+
+/* ---------- horizontal gallery ---------- */
+.hs{position:relative;border-top:1px solid var(--line)}
+.hs-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.hs-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+.hs-head h2{font-size:clamp(34px,4.2vw,60px)}
+.hs-head .count{font-family:var(--fh);font-size:15px;color:var(--muted);white-space:nowrap}
+.hs-head .count b{color:var(--ink);font-weight:600}
+.hs-track{display:flex;gap:18px;padding-left:calc(max((100vw - var(--max))/2,0px) + var(--gut) + clamp(8px,3vw,48px));will-change:transform}
+.shot{flex:0 0 auto;height:min(56vh,520px);border-radius:var(--r);overflow:hidden;position:relative;background:var(--bg2);cursor:none}
+.shot img{height:100%;width:auto;object-fit:cover;transition:transform 1s var(--ease)}
+.shot:hover img{transform:scale(1.05)}
+.shot figcaption{position:absolute;left:14px;bottom:14px;right:14px;color:#fff;font-size:13px;display:flex;justify-content:space-between;align-items:flex-end;z-index:2}
+.shot figcaption b{font-family:var(--fh);font-size:20px;font-weight:600;display:block;line-height:1.1}
+.shot:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(0,0,0,.55))}
+.hs-progress{height:2px;background:var(--line);margin-top:34px;position:relative;overflow:hidden}
+.hs-progress i{position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--ink);transform:scaleX(0);transform-origin:left}
+
+/* ---------- experience ---------- */
+.xp{display:grid;grid-template-columns:.75fr 1.25fr;gap:60px;padding:50px 0;border-top:1px solid var(--line)}
+.xp:first-of-type{border-top:0}
+.xp .when{position:sticky;top:130px;align-self:start}
+.xp .when .d{font-family:var(--fh);font-weight:600;font-size:15px;color:var(--muted);letter-spacing:.06em}
+.xp .when h3{font-size:clamp(28px,3vw,40px);margin:10px 0 8px}
+.xp .when .co{font-size:14.5px;color:var(--ink2)}
+.xp .when .now{display:inline-flex;align-items:center;margin-top:16px;font-size:12.5px;padding:5px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line)}
+.xp ol{list-style:none;counter-reset:x}
+.xp li{counter-increment:x;position:relative;padding:16px 0 16px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink2)}
+.xp li:before{content:counter(x,decimal-leading-zero);position:absolute;left:0;top:17px;font-family:var(--fh);font-weight:600;color:var(--soft);font-size:15px}
+.xp li b{font-weight:600;color:var(--ink);background:linear-gradient(transparent 62%,rgba(213,254,0,.65) 62%)}
+
+/* ---------- tools ---------- */
+.tools{overflow:hidden;display:flex;flex-direction:column;gap:12px;margin-top:10px}
+.trow{display:flex;gap:12px;width:max-content;animation:mq 50s linear infinite}
+.trow.rev{animation-direction:reverse;animation-duration:58s}
+.trow span{font-size:15px;padding:12px 22px;border-radius:999px;background:var(--card);border:1px solid var(--line);white-space:nowrap;transition:background .3s,transform .3s}
+.trow span:hover{background:var(--lime);transform:translateY(-3px)}
+
+/* ---------- footer ---------- */
+footer{background:var(--dark);color:#fff;position:relative;z-index:1;margin-top:clamp(80px,10vw,140px);border-radius:32px 32px 0 0;overflow:hidden}
+.fcta{padding:clamp(80px,10vw,130px) 0 70px;display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:end;border-bottom:1px solid rgba(255,255,255,.1)}
+.fcta h2{font-size:clamp(44px,6.4vw,104px)}
+.fcta h2 em{font-style:normal;color:var(--lime)}
+.fcta .side{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.fcta .side p{color:rgba(255,255,255,.6);margin-bottom:12px}
+.fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding:50px 0}
+.fgrid h4{font-family:var(--fb);font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:14px}
+.fgrid a,.fgrid span{display:block;font-size:15px;color:rgba(255,255,255,.88);margin-bottom:8px;transition:color .3s}
+.fgrid a:hover{color:var(--lime)}
+.wordmark{font-family:var(--fh);font-weight:600;font-size:clamp(90px,22vw,330px);line-height:.78;letter-spacing:.06em;text-align:center;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.18);white-space:nowrap;user-select:none;padding-top:20px;transform:translateY(12%)}
+.wordmark span{display:inline-block;transition:color .4s,-webkit-text-stroke-color .4s}
+.wordmark span:hover{color:var(--lime);-webkit-text-stroke-color:var(--lime)}
+.fbot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:20px 0 26px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;color:rgba(255,255,255,.5);position:relative;z-index:2;background:var(--dark)}
+
+/* ---------- floating ---------- */
+.float{position:fixed;right:var(--gut);bottom:20px;z-index:40;display:flex;gap:8px;transform:translateY(140%);transition:transform .8s var(--ease)}
+body.scrolled .float{transform:none}
+.float .wa{width:50px;height:50px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 10px 30px -10px rgba(0,0,0,.3);transition:transform .3s}
+.float .wa:hover{transform:scale(1.08)}
+.float .gq{background:var(--ink);color:#fff;border-radius:999px;padding:0 26px;display:flex;align-items:center;font-size:14px;font-weight:500;box-shadow:0 10px 30px -10px rgba(0,0,0,.4);transition:background .3s,color .3s}
+.float .gq:hover{background:var(--lime);color:var(--ink)}
+.progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:60;background:var(--lime);transform:scaleX(0);transform-origin:left}
+
+/* ---------- cursor ---------- */
+.cur{position:fixed;left:0;top:0;z-index:90;pointer-events:none;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--ink);mix-blend-mode:normal;transition:width .4s var(--ease),height .4s var(--ease),margin .4s var(--ease),background .3s;display:grid;place-items:center;font-size:12px;font-weight:600;color:var(--ink)}
+.cur span{opacity:0;transition:opacity .3s}
+.cur.view{width:84px;height:84px;margin:-42px 0 0 -42px;background:var(--lime)}
+.cur.view span{opacity:1}
+.cur.link{width:44px;height:44px;margin:-22px 0 0 -22px;background:rgba(213,254,0,.45)}
+@media (hover:none),(pointer:coarse){.cur{display:none}.wimg,.shot{cursor:pointer}}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:95;background:rgba(10,11,12,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s}
+.lb.open{opacity:1;pointer-events:auto}
+.lb img{max-width:min(92vw,1400px);max-height:84vh;border-radius:14px;transform:scale(.94);transition:transform .5s var(--ease)}
+.lb.open img{transform:none}
+.lb .lbc{position:absolute;bottom:24px;left:0;right:0;text-align:center;color:rgba(255,255,255,.8);font-size:14px}
+.lb button{position:absolute;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-size:22px;display:grid;place-items:center;transition:background .3s}
+.lb button:hover{background:var(--lime);color:var(--ink)}
+.lb .x{top:20px;right:20px}.lb .pv{left:20px;top:50%;margin-top:-26px}.lb .nx{right:20px;top:50%;margin-top:-26px}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .nav-links{display:none}
+  .burger{display:block}
+  .nav-bar .cta{display:none}
+}
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;padding-top:170px}
+  .hero-art{height:50svh;min-height:340px;order:-1;margin:0 -10px}
+  .corner{display:none}
+  .scrollhint{display:none}
+  .statement,.headrow,.fcta{grid-template-columns:1fr;gap:28px}
+  .work,.work:nth-child(even){grid-template-columns:1fr}
+  .work:nth-child(even) .wtext{order:0}
+  .dark{grid-template-columns:1fr}
+  .dark .dr{min-height:460px}
+  .xp{grid-template-columns:1fr;gap:20px}
+  .xp .when{position:static}
+  .fgrid{grid-template-columns:repeat(2,1fr)}
+  .nav-sub .mid{display:none}
+  .hs{height:auto!important}
+  .hs-sticky{position:static;height:auto;padding:90px 0}
+  .hs-track{transform:none!important;overflow-x:auto;scroll-snap-type:x mandatory;padding-right:20px;scrollbar-width:none}
+  .hs-track::-webkit-scrollbar{display:none}
+  .shot{scroll-snap-align:start;height:420px}
+  .hs-progress{display:none}
+}
+@media (max-width:560px){
+  .cards,.stats{grid-template-columns:1fr}
+  .card{min-height:0}
+  .nav-sub{font-size:12px;padding:38px 16px 9px}
+  .float .gq{padding:0 18px}
+  .hero h1{font-size:40px}
+  .shot{height:360px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  .hero h1 .w>span{transform:none}
+  .work .wimg .shade{display:none}
+}
 </style>
 </head>
 <body>
 
-<header class="masthead">
-  <div class="wrap masthead-top">
-    <span>Dubai · Bangalore — updated 2026</span>
-    <span>Marketing &amp; growth, since 2015</span>
-  </div>
-  <div class="wrap masthead-nav">
-    <div class="wordmark">R. Charan Shankar Naidu</div>
-    <nav class="navlinks">
-      <a href="#coverage">Coverage</a>
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="lw">CHARAN · MARKETING</div>
+  <div class="lc" id="lcount">0</div>
+</div>
+<div class="progress" id="progress"></div>
+<div class="frame"></div>
+<div class="cur" id="cur"><span>View</span></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-bar">
+    <a href="#top" class="logo" aria-label="Charan — home"><b>CH<i>A</i>RAN</b><small>MARKETING</small></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#expertise">Expertise</a>
+      <a href="#work">Selected Work</a>
+      <a href="#impact">Impact</a>
       <a href="#experience">Experience</a>
-      <a href="#ai">AI &amp; automation</a>
-      <a href="#work">Selected work</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a href="#contact" class="cta magnet">Let's talk <span class="chev">&#8250;&#8250;</span></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </div>
+  <div class="nav-sub">
+    <span>Dubai | <span id="t-dxb">--:--</span> GST</span>
+    <span class="mid"><span class="dot"></span>Open to conversations · Marketing leadership</span>
+    <span>Bangalore | <span id="t-blr">--:--</span> IST</span>
   </div>
 </header>
+<div class="mmenu" id="mmenu">
+  <a href="#expertise">Expertise</a>
+  <a href="#work">Selected Work</a>
+  <a href="#impact">Impact</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
+</div>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span>REVENUE ₹1 CR → ₹50 CR <span class="up">▲</span></span>
-    <span>AUDIENCE BUILT 8,00,000+ <span class="up">▲</span></span>
-    <span>ONLINE SALES +180% YOY <span class="up">▲</span></span>
-    <span>MARKETS — INDIA / GCC / USA / SE ASIA</span>
-    <span>GTM LAUNCHES 15+</span>
-    <span>DOMAINS — EDTECH · FINTECH · FMCG · AGRITECH</span>
-    <span>REVENUE ₹1 CR → ₹50 CR <span class="up">▲</span></span>
-    <span>AUDIENCE BUILT 8,00,000+ <span class="up">▲</span></span>
-    <span>ONLINE SALES +180% YOY <span class="up">▲</span></span>
-    <span>MARKETS — INDIA / GCC / USA / SE ASIA</span>
-    <span>GTM LAUNCHES 15+</span>
-    <span>DOMAINS — EDTECH · FINTECH · FMCG · AGRITECH</span>
+<main id="top">
+<!-- HERO -->
+<section class="wrap hero">
+  <span class="corner l">Built for growth.</span>
+  <span class="corner r">Not for vanity metrics.</span>
+  <div>
+    <div class="eyebrow rv in"><span>Performance</span><span>Brand</span><span>CRM</span><span>GTM</span><span>AI Automation</span></div>
+    <h1 class="h" id="heroTitle">
+      <span class="g">Marketing leader building</span> <span class="g">growth engines</span> for EdTech, FinTech, FMCG &amp; Agritech
+    </h1>
+    <p class="lead">I'm <b>R. Charan Shankar Naidu</b> — 10+ years turning strategy, data, content and CRM into <b>measurable growth</b> across India, the GCC, the USA and Southeast Asia.</p>
+    <div class="btns">
+      <a href="tel:+918197307148" class="pill dark magnet">Book a call with Charan <span class="av"><img src="images/main-2.jpg" alt=""></span></a>
+      <a href="#work" class="pill light magnet">View work &#8250;&#8250;</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <canvas id="particles" aria-label="Portrait of Charan rendered as interactive particles"></canvas>
+    <div class="hero-tag"><strong>₹50 Cr</strong>revenue scaled at Irra Agrotech</div>
+  </div>
+  <div class="scrollhint"><i></i>Scroll to explore</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="mtrack">
+    <span>Primexar</span><span>Onexar</span><span>Microbi Agrotech</span><span>Irra Agrotech</span><span>Barrix Agro Science</span><span>GITEX</span><span>Amazon</span><span>Flipkart</span><span>Agriplex</span>
+    <span>Primexar</span><span>Onexar</span><span>Microbi Agrotech</span><span>Irra Agrotech</span><span>Barrix Agro Science</span><span>GITEX</span><span>Amazon</span><span>Flipkart</span><span>Agriplex</span>
   </div>
 </div>
 
-<header class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="dateline">Marketing Manager — B2C &amp; B2B growth, CRM and AI-led marketing operations</div>
-      <h1>Marketing, <em>underwritten by data.</em></h1>
-      <p class="hero-lede">
-        Ten years building acquisition, brand and CRM systems across EdTech, FinTech, FMCG
-        and Agritech — from a ₹1 Cr agri-brand to a global forex education academy. I move
-        between B2C funnels and B2B partnerships, and I've spent the last year rebuilding
-        how much of that work is done with AI.
-      </p>
-      <div class="hero-actions">
-        <a class="btn solid" href="#work">Read the selected work</a>
-        <a class="btn" href="mailto:charan.shankar09@gmail.com">Write to me</a>
-      </div>
-    </div>
-
-    <div class="ledger">
-      <div class="ledger-title">Career ledger, as it stands</div>
-      <div class="ledger-row"><span class="label">Years in marketing</span><span class="fill"></span><span class="value">10+</span></div>
-      <div class="ledger-row"><span class="label">Revenue scaled, single brand</span><span class="fill"></span><span class="value">₹1 Cr → ₹50 Cr</span></div>
-      <div class="ledger-row"><span class="label">Social audience built</span><span class="fill"></span><span class="value">8,00,000+</span></div>
-      <div class="ledger-row"><span class="label">Annual budget directed</span><span class="fill"></span><span class="value">₹5 Cr</span></div>
-      <div class="ledger-row"><span class="label">GTM product launches led</span><span class="fill"></span><span class="value">15+</span></div>
-      <div class="ledger-row"><span class="label">Online sales growth, YoY</span><span class="fill"></span><span class="value">+180%</span></div>
-      <div class="ledger-row"><span class="label">Cross-functional team led</span><span class="fill"></span><span class="value">18 members</span></div>
-      <div class="ledger-row"><span class="label">Markets worked across</span><span class="fill"></span><span class="value">India · GCC · USA · SEA</span></div>
+<!-- STATEMENT -->
+<section class="sec" id="about">
+  <i class="x l"></i><i class="x r"></i>
+  <div class="wrap statement">
+    <h2 class="h gtext" id="glitch" data-dim="4">Marketing can be complex. Growth shouldn't feel random.</h2>
+    <div class="stmt-side">
+      <p class="rv">Acquisition, content, CRM, retention and analytics usually live in separate silos — with different owners, tools and numbers.</p>
+      <p class="rv d1">My job is to connect them into one marketing system: understandable, measurable and ready to scale. A mix of strategy, execution, data, relationships and storytelling.</p>
     </div>
   </div>
-</header>
+</section>
 
-<!-- COVERAGE -->
-<section id="coverage">
-  <div class="wrap coverage-grid">
-    <div>
-      <div class="section-tag">Coverage</div>
-      <h2>Built for whichever domain lands next.</h2>
-      <div class="coverage-copy">
-        <p>
-          I've run <strong>B2C acquisition</strong> — direct-to-learner funnels for a forex
-          academy, direct-to-consumer sales for an agri brand — and I've closed
-          <strong>B2B partnerships</strong>, from an export deal with Canada's Trade
-          Commissioner to a co-marketing collaboration with a funded agritech company.
-        </p>
-        <p>
-          That range is the point. The channels, the CRM logic and the AI layer stay the
-          same; only the audience and the compliance rules change. It's why I've been able
-          to move from agritech to fintech education without losing a step.
-        </p>
+<!-- EXPERTISE -->
+<section class="sec" id="expertise">
+  <i class="x l"></i><i class="x r"></i>
+  <div class="wrap">
+    <div class="headrow">
+      <div>
+        <div class="label rv">What I do</div>
+        <h2 class="h rv d1"><span class="g">Specialised in growth</span> where clarity and numbers matter.</h2>
+      </div>
+      <p class="rv d2">Experience across EdTech, FinTech, FMCG and Agritech — B2C and B2B, in India, GCC, USA and Southeast Asia.</p>
+    </div>
+    <div class="cards">
+      <article class="card rv"><span class="num">01</span><span class="chip">Performance</span><h3 class="h">Performance Marketing</h3><p>ROAS-led acquisition across Google, Meta and LinkedIn with structured tracking and reporting.</p><ul><li>Google &amp; Meta Ads</li><li>LinkedIn campaigns</li><li>SEO + paid media</li></ul><i class="glow"></i></article>
+      <article class="card rv d1"><span class="num">02</span><span class="chip">CRM</span><h3 class="h">CRM &amp; Automation</h3><p>Funnels that capture, score and nurture leads automatically — from first click to conversion.</p><ul><li>Zoho CRM + SQL</li><li>WhatsApp Business API</li><li>Zapier workflows</li></ul><i class="glow"></i></article>
+      <article class="card rv d2"><span class="num">03</span><span class="chip">Brand</span><h3 class="h">Brand &amp; GTM</h3><p>Launches and brand building across ATL and BTL — 15+ go-to-market launches from concept to execution.</p><ul><li>GTM strategy</li><li>ATL / BTL campaigns</li><li>Events &amp; exhibitions</li></ul><i class="glow"></i></article>
+      <article class="card rv d3"><span class="num">04</span><span class="chip">AI</span><h3 class="h">AI Marketing Systems</h3><p>AI-powered content pipelines and calling workflows that scale output without scaling headcount.</p><ul><li>HeyGen &amp; ElevenLabs</li><li>Retell AI calling</li><li>Power BI dashboards</li></ul><i class="glow"></i></article>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<div class="wrap" style="padding-bottom:clamp(80px,10vw,140px)">
+  <div class="band rv" id="band">
+    <img src="images/main-18.jpg" alt="Media and launch event">
+    <div class="bt"><h3 class="h">From exhibition floors to <em>AI pipelines.</em></h3><p>A decade of building audiences, launching products and scaling revenue.</p></div>
+  </div>
+</div>
+
+<!-- IMPACT -->
+<section class="sec" id="impact">
+  <i class="x l"></i><i class="x r"></i>
+  <div class="wrap">
+    <div class="headrow">
+      <div>
+        <div class="label rv">Impact by numbers</div>
+        <h2 class="h rv d1"><span class="g">Outcomes,</span> not activity.</h2>
+      </div>
+      <p class="rv d2">Selected outcomes from my marketing, growth and leadership work.</p>
+    </div>
+    <div class="stats">
+      <div class="stat rv"><div class="v"><span data-count="10">0</span><sup>+</sup></div><p>Years in marketing</p><i class="bar"></i></div>
+      <div class="stat rv d1"><div class="v">₹<span data-count="50">0</span><sup>Cr</sup></div><p>Revenue scaled at Irra Agrotech</p><i class="bar"></i></div>
+      <div class="stat rv d2"><div class="v"><span data-count="15">0</span><sup>+</sup></div><p>GTM product launches</p><i class="bar"></i></div>
+      <div class="stat rv d3"><div class="v"><span data-count="8">0</span><sup>L+</sup></div><p>Social audience built across platforms</p><i class="bar"></i></div>
+      <div class="stat rv"><div class="v">₹<span data-count="5">0</span><sup>Cr</sup></div><p>Annual marketing budget managed</p><i class="bar"></i></div>
+      <div class="stat rv d1"><div class="v"><span data-count="180">0</span><sup>%</sup></div><p>YoY online sales growth</p><i class="bar"></i></div>
+      <div class="stat rv d2"><div class="v"><span data-count="18">0</span></div><p>Member cross-functional team</p><i class="bar"></i></div>
+      <div class="stat rv d3"><div class="v"><span data-count="3">0</span><sup>+</sup></div><p>International markets expanded</p><i class="bar"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="sec" id="work">
+  <i class="x l"></i><i class="x r"></i>
+  <div class="wrap">
+    <div class="headrow">
+      <div>
+        <div class="label rv">Selected work</div>
+        <h2 class="h rv d1"><span class="g">Projects, partnerships</span> and milestones.</h2>
+      </div>
+      <p class="rv d2">A selection of projects, events, team collaborations and marketing milestones from my career.</p>
+    </div>
+    <div class="works">
+      <article class="work">
+        <div class="wtext rv"><div class="idx">01</div><div class="kicker">Government Project</div><h3 class="h">Working with government stakeholders</h3><p>Government project engagement involving meetings and stakeholder discussions with Members of Parliament.</p><div class="tags"><span>Public sector</span><span>Stakeholders</span><span>Agritech</span></div></div>
+        <figure class="wimg" data-lb="0"><img src="images/main-5.jpg" alt="Government project meeting with MPs" loading="lazy"><span class="cap">Stakeholder meeting</span><span class="arrow"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 12 12 4M5 4h7v7" stroke="#121212" stroke-width="1.6" fill="none"/></svg></span><i class="shade"></i></figure>
+      </article>
+      <article class="work">
+        <div class="wtext rv"><div class="idx">02</div><div class="kicker">International FinTech Event</div><h3 class="h">GITEX</h3><p>International event environment focused on fintech, business relationships and global networking.</p><div class="tags"><span>FinTech</span><span>Events</span><span>Networking</span><span>Dubai</span></div></div>
+        <figure class="wimg" data-lb="1"><img src="images/main-6.jpg" alt="GITEX international fintech event" loading="lazy"><span class="cap">GITEX Global</span><span class="arrow"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 12 12 4M5 4h7v7" stroke="#121212" stroke-width="1.6" fill="none"/></svg></span><i class="shade"></i></figure>
+      </article>
+      <article class="work">
+        <div class="wtext rv"><div class="idx">03</div><div class="kicker">International Business</div><h3 class="h">Export collaboration with Canada</h3><p>Business and export collaboration with the Trade Commissioner and Canada Embassy.</p><div class="tags"><span>Export</span><span>International</span><span>Partnerships</span></div></div>
+        <figure class="wimg" data-lb="2"><img src="images/main-7.jpg" alt="Export collaboration with Canada Trade Commissioner" loading="lazy"><span class="cap">Trade collaboration</span><span class="arrow"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 12 12 4M5 4h7v7" stroke="#121212" stroke-width="1.6" fill="none"/></svg></span><i class="shade"></i></figure>
+      </article>
+      <article class="work">
+        <div class="wtext rv"><div class="idx">04</div><div class="kicker">B2B Collaboration</div><h3 class="h">Barrix Agro Science</h3><p>B2B collaboration and business engagement with Barrix Agro Science, a funded agritech company.</p><div class="tags"><span>B2B</span><span>Agritech</span><span>Business development</span></div></div>
+        <figure class="wimg" data-lb="3"><img src="images/main-12.jpg" alt="B2B collaboration with Barrix Agro Science" loading="lazy"><span class="cap">Barrix Agro Science</span><span class="arrow"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 12 12 4M5 4h7v7" stroke="#121212" stroke-width="1.6" fill="none"/></svg></span><i class="shade"></i></figure>
+      </article>
+      <article class="work">
+        <div class="wtext rv"><div class="idx">05</div><div class="kicker">Product Launch</div><h3 class="h">ATL &amp; BTL product marketing</h3><p>Product launch execution across ATL and BTL channels, connecting brand communication with market activation.</p><div class="tags"><span>GTM</span><span>ATL</span><span>BTL</span><span>Launch</span></div></div>
+        <figure class="wimg" data-lb="4"><img src="images/main-17.jpg" alt="Product launch ATL and BTL campaign" loading="lazy" style="object-position:center 25%"><span class="cap">Launch keynote</span><span class="arrow"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 12 12 4M5 4h7v7" stroke="#121212" stroke-width="1.6" fill="none"/></svg></span><i class="shade"></i></figure>
+      </article>
+      <article class="work">
+        <div class="wtext rv"><div class="idx">06</div><div class="kicker">Team Collaboration</div><h3 class="h">Cross-functional collaboration</h3><p>Working with teams across marketing, business and execution to turn strategy into measurable outcomes.</p><div class="tags"><span>Leadership</span><span>Workshops</span><span>Teams</span></div></div>
+        <figure class="wimg" data-lb="5"><img src="images/main-3.jpg" alt="Team collaboration and business discussion" loading="lazy"><span class="cap">Team session</span><span class="arrow"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 12 12 4M5 4h7v7" stroke="#121212" stroke-width="1.6" fill="none"/></svg></span><i class="shade"></i></figure>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="sec" id="audience">
+  <i class="x l"></i><i class="x r"></i>
+  <div class="wrap">
+    <div class="dark rv">
+      <div class="dl">
+        <div class="label">Building an audience</div>
+        <h2 class="h">Content, community &amp; a new <em>finance channel.</em></h2>
+        <p>Built and grew a social audience of 8 lakh+ through content strategy, campaign planning, video and consistent engagement. Now creating content on finance, markets and financial learning.</p>
+        <div class="platforms"><span>YouTube</span><span>Meta</span><span>LinkedIn</span><span>Instagram</span><span>Video Marketing</span><span>Organic Growth</span></div>
+        <a href="https://www.instagram.com/charan09_builds/" target="_blank" rel="noopener" class="pill ig magnet">View Instagram &#8250;&#8250;</a>
+        <div class="big"><span data-count="8">0</span>L+</div>
+        <div class="bigl">Social audience built across platforms</div>
+      </div>
+      <div class="dr" id="phones">
+        <div class="phone p1" data-depth="18"><img src="images/main-19.jpg" alt="Finance content channel on Instagram" loading="lazy"></div>
+        <div class="phone p2" data-depth="-14"><img src="images/main-13.jpg" alt="YouTube play button and social media achievement" loading="lazy"></div>
       </div>
     </div>
+  </div>
+</section>
 
-    <table class="domain-table">
-      <thead>
-        <tr><th>Domain</th><th>Where</th><th>What I ran</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="dtag">FinTech / Forex ed.</td>
-          <td class="dwhere">Primexar, Onexar</td>
-          <td>B2C global student acquisition, compliance-safe Meta ad copy, AI call &amp; CRM stack</td>
-        </tr>
-        <tr>
-          <td class="dtag">EdTech</td>
-          <td class="dwhere">Primexar</td>
-          <td>Workshop and event funnels, SEO paired with paid media, WhatsApp nurture</td>
-        </tr>
-        <tr>
-          <td class="dtag">Agritech</td>
-          <td class="dwhere">Irra Agrotech</td>
-          <td>Brand build from ₹1 Cr to ₹50 Cr, B2C e-commerce, B2B distribution</td>
-        </tr>
-        <tr>
-          <td class="dtag">FMCG</td>
-          <td class="dwhere">Irra Agrotech</td>
-          <td>ATL/BTL campaigns across TV, billboards and digital; 15+ launches</td>
-        </tr>
-        <tr>
-          <td class="dtag">B2B / Trade</td>
-          <td class="dwhere">Canada Trade Comm., Barrix Agro</td>
-          <td>Export collaboration and partner co-marketing</td>
-        </tr>
-      </tbody>
-    </table>
+<!-- GALLERY (horizontal) -->
+<section class="hs" id="moments">
+  <div class="hs-sticky">
+    <div class="wrap hs-head">
+      <div>
+        <div class="label">More moments</div>
+        <h2 class="h">Team discussions, leadership &amp; events.</h2>
+      </div>
+      <div class="count"><b id="hsNow">01</b> / <span id="hsAll">09</span></div>
+    </div>
+    <div class="hs-track" id="hsTrack">
+      <figure class="shot" data-lb="6"><img src="images/main-4.jpg" alt="Professional event" loading="lazy"><figcaption><span><b>Team offsite</b>Professional event</span></figcaption></figure>
+      <figure class="shot" data-lb="7"><img src="images/main-16.jpg" alt="Speaking session" loading="lazy"><figcaption><span><b>On stage</b>Speaking session</span></figcaption></figure>
+      <figure class="shot" data-lb="8"><img src="images/main-8.jpg" alt="Professional interaction" loading="lazy"><figcaption><span><b>Boardroom</b>Professional interaction</span></figcaption></figure>
+      <figure class="shot" data-lb="9"><img src="images/main-10.jpg" alt="Leadership and professional event" loading="lazy"><figcaption><span><b>Expo floor</b>Leadership &amp; events</span></figcaption></figure>
+      <figure class="shot" data-lb="10"><img src="images/main-14.jpg" alt="Stakeholder meeting" loading="lazy"><figcaption><span><b>Stakeholders</b>Government meeting</span></figcaption></figure>
+      <figure class="shot" data-lb="11"><img src="images/main-9.jpg" alt="Marketing and business event" loading="lazy"><figcaption><span><b>Conversations</b>Marketing &amp; business</span></figcaption></figure>
+      <figure class="shot" data-lb="12"><img src="images/main-11.jpg" alt="Team discussion" loading="lazy"><figcaption><span><b>Whiteboard</b>Team discussion</span></figcaption></figure>
+      <figure class="shot" data-lb="13"><img src="images/main-15.jpg" alt="Partner discussion" loading="lazy"><figcaption><span><b>Partners</b>Business discussion</span></figcaption></figure>
+      <figure class="shot" data-lb="14"><img src="images/main-2.jpg" alt="Charan presenting" loading="lazy"><figcaption><span><b>Workshop</b>Presenting to the team</span></figcaption></figure>
+    </div>
+    <div class="wrap"><div class="hs-progress"><i id="hsBar"></i></div></div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
+<section class="sec" id="experience">
+  <i class="x l"></i><i class="x r"></i>
   <div class="wrap">
-    <div class="section-tag">Experience</div>
-    <h2>Where the numbers above came from.</h2>
-    <p class="section-intro">Two roles, one throughline: turn a marketing function from
-      guesswork into something measurable, then keep it running with less manual effort
-      each year.</p>
-
-    <div class="role">
-      <div class="role-date">Sep 2025 — Present</div>
+    <div class="headrow">
       <div>
-        <h3>Marketing Manager</h3>
-        <div class="company">Primexar Professional Management · under Onexar · Dubai</div>
-        <ul>
-          <li>Own <b>end-to-end B2C acquisition</b> for a KHDA-approved forex trading
-            academy across India, GCC, USA and Southeast Asia.</li>
-          <li>Rebuilt the department in 7 months from guesswork to a <b>100% data-driven</b>
-            marketing culture, with tracking built from scratch.</li>
-          <li>Run and optimise spend across <b>Google Ads, Meta and LinkedIn</b>, holding
-            ROAS up and acquisition cost down.</li>
-          <li>Built the <b>AI content pipeline</b> — HeyGen, ElevenLabs, Canva and Zapier —
-            that now produces most video and creative output.</li>
-          <li>Put <b>Retell AI</b> into the call centre for automated calling and lead
-            scoring, so the team closes enrollments faster.</li>
-          <li>Architected the <b>Zoho CRM</b> funnel with SQL-based extraction — zero lead
-            leakage across four regions.</li>
-          <li>Automated <b>WhatsApp Business API</b> sequences that keep prospective
-            learners engaged around the clock.</li>
-          <li>Report CAC, ROAS and conversion live to leadership through <b>Power BI</b>
-            dashboards.</li>
-        </ul>
-        <div class="role-tags">
-          <span>B2C</span><span>Google Ads</span><span>Meta</span><span>LinkedIn</span>
-          <span>Zoho CRM</span><span>Retell AI</span><span>WhatsApp API</span><span>Power BI</span>
-        </div>
+        <div class="label rv">Experience</div>
+        <h2 class="h rv d1"><span class="g">From building audiences</span> to AI-led marketing systems.</h2>
       </div>
+      <p class="rv d2">Scaling revenue, developing AI-led marketing systems and driving international growth.</p>
     </div>
-
-    <div class="role">
-      <div class="role-date">Jun 2015 — Apr 2025</div>
-      <div>
-        <h3>Marketing &amp; Growth Lead</h3>
-        <div class="company">Microbi Agrotech Pvt Ltd · Irra Agrotech</div>
-        <ul>
-          <li>Scaled client revenue from <b>₹1 Cr to ₹30 Cr</b> in three years, then to
-            <b>₹50 Cr</b>, through strategy, distribution and GTM execution.</li>
-          <li>Ran both <b>B2C and B2B marketing</b> in parallel — consumer acquisition
-            alongside distributor and partner growth.</li>
-          <li>Built and grew a social audience of <b>8 lakh+</b> across YouTube and Meta,
-            with organic video reaching millions of views.</li>
-          <li>Led ATL &amp; BTL campaigns across TV, billboards, YouTube, Google and Meta.</li>
-          <li>Directed <b>15+ GTM launches</b>, and grew online sales <b>180% YoY</b> across
-            Amazon, Flipkart, Agriplex and the website.</li>
-          <li>Held a <b>₹5 Cr</b> annual budget and led an <b>18-member</b> cross-functional
-            team across marketing, tech and finance.</li>
-          <li>Ran branded events at agri exhibitions for 9 years, and supported expansion
-            into <b>Kenya and Southeast Asia</b>.</li>
-        </ul>
-        <div class="role-tags">
-          <span>B2C</span><span>B2B</span><span>YouTube</span><span>Meta</span>
-          <span>ATL/BTL</span><span>GTM</span><span>E-commerce</span><span>P&amp;L</span>
-        </div>
-      </div>
+    <div class="xp">
+      <div class="when rv"><div class="d">SEP 2025 — PRESENT</div><h3 class="h">Marketing Manager</h3><div class="co">Primexar Professional Management · Under Onexar · Dubai</div><span class="now"><span class="dot"></span>Current role</span></div>
+      <ol>
+        <li class="rv">Lead the end-to-end marketing engine and <b>global student acquisition</b> across India, GCC, USA and Southeast Asia.</li>
+        <li class="rv">Built structured tracking and reporting to move marketing toward a data-driven operating model.</li>
+        <li class="rv">Manage and optimise Google Ads, Meta and LinkedIn campaigns with focus on <b>ROAS</b> and acquisition efficiency.</li>
+        <li class="rv">Built an <b>AI-powered content pipeline</b> using HeyGen, ElevenLabs, Canva and Zapier.</li>
+        <li class="rv">Integrated AI into call-centre and marketing workflows, including <b>Retell AI</b> for automated calling and lead scoring.</li>
+        <li class="rv">Architected a <b>Zoho CRM funnel</b> with SQL-based data extraction for targeting and performance diagnostics.</li>
+        <li class="rv">Built automated WhatsApp Business API journeys and AI-assisted engagement sequences.</li>
+        <li class="rv">Created Power BI dashboards covering CAC, ROAS and conversion performance across markets.</li>
+        <li class="rv">Connected SEO and paid media to support workshops, events and lead generation.</li>
+      </ol>
     </div>
-
-    <div class="role">
-      <div class="role-date">2014 — 2015</div>
-      <div>
-        <h3>Credit Appraisal Officer</h3>
-        <div class="company">DHFL</div>
-        <ul>
-          <li>Evaluated salaried and self-employed home loan applications with financial
-            and risk analysis, ensuring policy compliance and timely approvals — the
-            numbers discipline that still shapes how I read a campaign report.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AI & AUTOMATION -->
-<section id="ai">
-  <div class="wrap">
-    <div class="section-tag">AI &amp; automation</div>
-    <h2>Where AI actually sits in the funnel.</h2>
-    <p class="section-intro">Not a slide of logos — this is the stack running inside the
-      marketing operation today, and what changed once each piece went live.</p>
-
-    <table class="ai-table">
-      <thead>
-        <tr><th>Tool</th><th>Sits where</th><th>What it changed</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="tool">Retell AI</td>
-          <td>Call centre, outbound</td>
-          <td>Automated calling and lead scoring, so agents spend time on qualified
-            conversations instead of dialling</td>
-        </tr>
-        <tr>
-          <td class="tool">Zoho CRM + SQL</td>
-          <td>Funnel &amp; targeting</td>
-          <td>Zero lead leakage across four regions, with SQL pulls feeding campaign
-            targeting directly</td>
-        </tr>
-        <tr>
-          <td class="tool">WhatsApp Business API</td>
-          <td>Nurture</td>
-          <td>Always-on, AI-assisted sequences that keep prospective learners engaged
-            without a human on every message</td>
-        </tr>
-        <tr>
-          <td class="tool">HeyGen + ElevenLabs</td>
-          <td>Video &amp; localisation</td>
-          <td>Localised video at a speed a production team couldn't match — part of
-            what supported the Southeast Asia push</td>
-        </tr>
-        <tr>
-          <td class="tool">Power BI</td>
-          <td>Reporting</td>
-          <td>Live CAC, ROAS and conversion dashboards, replacing after-the-fact
-            spreadsheet reporting</td>
-        </tr>
-        <tr>
-          <td class="tool">Zapier + Canva</td>
-          <td>Content ops</td>
-          <td>Content pipeline running between CRM, creative and channels with far less
-            manual handoff</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p class="ai-note">
-      The test I use for any AI tool: does it remove a manual step without removing a
-      human decision. Retell AI scores leads; a person still decides who to call back.
-      HeyGen produces the video; the script and compliance language are still mine.
-    </p>
-  </div>
-</section>
-
-<!-- SELECTED WORK -->
-<section id="work">
-  <div class="wrap">
-    <div class="section-tag">Selected work</div>
-    <h2>Campaigns, partnerships and rooms I've been in.</h2>
-    <p class="section-intro">Filter by domain — the range is deliberate.</p>
-
-    <div class="filters" role="group" aria-label="Filter selected work by domain">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="fintech">FinTech</button>
-      <button class="filter-btn" data-filter="edtech">EdTech</button>
-      <button class="filter-btn" data-filter="agritech">Agritech</button>
-      <button class="filter-btn" data-filter="fmcg">FMCG</button>
-      <button class="filter-btn" data-filter="b2b">B2B</button>
-      <button class="filter-btn" data-filter="b2c">B2C</button>
-      <button class="filter-btn" data-filter="government">Government</button>
-    </div>
-
-    <div class="work-grid">
-
-      <article class="work-card" data-domains="fintech b2b government">
-        <img src="images/main-5.jpg" alt="Government project meeting with Members of Parliament">
-        <div class="work-body">
-          <div class="work-no">01</div>
-          <h3>A seat at the government table</h3>
-          <p>Stakeholder meetings with Members of Parliament as part of a government-facing
-            growth initiative — marketing arguments made to policy, not just to customers.</p>
-          <div class="work-domains"><span>Government</span><span>B2B</span></div>
-        </div>
-      </article>
-
-      <article class="work-card" data-domains="fintech edtech b2c b2b">
-        <img src="images/main-6.jpg" alt="GITEX international fintech event">
-        <div class="work-body">
-          <div class="work-no">02</div>
-          <h3>GITEX — global fintech floor</h3>
-          <p>Building authority for a financial-education brand in a room full of the
-            region's fintech decision-makers — brand, not just booth.</p>
-          <div class="work-domains"><span>FinTech</span><span>B2B</span></div>
-        </div>
-      </article>
-
-      <article class="work-card" data-domains="agritech b2b">
-        <img src="images/main-7.jpg" alt="Export collaboration with the Canada Trade Commissioner">
-        <div class="work-body">
-          <div class="work-no">03</div>
-          <h3>An export line to Canada</h3>
-          <p>Working directly with the Trade Commissioner and the Canadian Embassy to build
-            an export and distribution relationship for the agri brand.</p>
-          <div class="work-domains"><span>Agritech</span><span>B2B</span></div>
-        </div>
-      </article>
-
-      <article class="work-card" data-domains="agritech b2b">
-        <img src="images/main-12.jpg" alt="B2B collaboration with Barrix Agro Science">
-        <div class="work-body">
-          <div class="work-no">04</div>
-          <h3>Barrix Agro Science</h3>
-          <p>A co-marketing partnership with a funded agritech company — two brands, one
-            shared distribution story.</p>
-          <div class="work-domains"><span>Agritech</span><span>B2B</span></div>
-        </div>
-      </article>
-
-      <article class="work-card" data-domains="fmcg agritech b2c">
-        <img src="images/main-17.jpg" alt="Product launch, ATL and BTL campaign">
-        <div class="work-body">
-          <div class="work-no">05</div>
-          <h3>15+ GTM launches, one playbook</h3>
-          <p>ATL and BTL working together — TV and billboards for reach, digital for
-            conversion — repeated across more than fifteen product launches.</p>
-          <div class="work-domains"><span>FMCG</span><span>B2C</span></div>
-        </div>
-      </article>
-
-      <article class="work-card" data-domains="fintech edtech b2c">
-        <img src="images/main-3.jpg" alt="Team discussion on the forex education strategy">
-        <div class="work-body">
-          <div class="work-no">06</div>
-          <h3>Rebuilding the funnel at Primexar</h3>
-          <p>Seven months from guesswork to a fully tracked, CRM-led acquisition funnel for
-            a global student base.</p>
-          <div class="work-domains"><span>FinTech</span><span>B2C</span></div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ALBUM -->
-<section>
-  <div class="wrap">
-    <div class="section-tag">Field notes</div>
-    <h2>More rooms, more work.</h2>
-
-    <div class="album">
-      <figure><img src="images/main-4.jpg" alt="Professional event"><figcaption>Event floor</figcaption></figure>
-      <figure><img src="images/main-8.jpg" alt="Professional interaction"><figcaption>Partner meeting</figcaption></figure>
-      <figure><img src="images/main-9.jpg" alt="Marketing and business event"><figcaption>Campaign review</figcaption></figure>
-      <figure><img src="images/main-10.jpg" alt="Leadership event"><figcaption>Leadership briefing</figcaption></figure>
-      <figure><img src="images/main-11.jpg" alt="Team discussion"><figcaption>Team working session</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- CHARAN BUILDS / INSTAGRAM -->
-<section>
-  <div class="wrap">
-    <div class="press">
-      <div class="press-photo">
-        <img src="images/main-13.jpg" alt="Charan Builds — financial education content">
-      </div>
-      <div>
-        <div class="section-tag">Also building</div>
-        <h3>Charan Builds — finance and markets, explained</h3>
-        <p>
-          Outside the day job, I write and script financial-education content on
-          Instagram — currency markets, generational purchasing power, the yen carry
-          trade, and how macro forces actually move a household budget. Same instinct
-          as the day job: take something dense and make it land.
-        </p>
-        <a class="btn solid" href="https://www.instagram.com/charan09_builds/" target="_blank" rel="noopener">
-          Follow @charan09_builds
-        </a>
-        <div style="margin-top:14px" class="handle">instagram.com/charan09_builds</div>
-      </div>
+    <div class="xp">
+      <div class="when rv"><div class="d">JUN 2015 — APR 2025</div><h3 class="h">Marketing &amp; Growth Leadership</h3><div class="co">Microbi Agrotech Pvt Ltd · Irra Agrotech</div></div>
+      <ol>
+        <li class="rv">Designed and led ATL and BTL campaigns across TV, billboards, YouTube, Google and Meta.</li>
+        <li class="rv">Built and grew a social audience of <b>8 lakh+</b> through content, campaigns and community building.</li>
+        <li class="rv">Conceptualised, scripted and produced promotional and product videos that reached millions of organic views.</li>
+        <li class="rv">Scaled revenue from <b>₹1 Cr to ₹30 Cr</b> within three years and further to <b>₹50 Cr</b> through marketing, distribution and GTM execution.</li>
+        <li class="rv">Led B2C and B2B acquisition, engagement and retention with continuous A/B testing and audience segmentation.</li>
+        <li class="rv">Directed <b>15+ GTM product launches</b> from concept through execution.</li>
+        <li class="rv">Increased online sales by <b>180% YoY</b> across Amazon, Flipkart, Agriplex and the company website.</li>
+        <li class="rv">Managed a ₹5 Cr annual marketing budget with focus on CAC efficiency and ROI.</li>
+        <li class="rv">Coordinated an 18-member cross-functional team across departments.</li>
+        <li class="rv">Planned branded events at agricultural exhibitions for nine years and supported expansion into Kenya and Southeast Asia.</li>
+      </ol>
     </div>
   </div>
 </section>
 
 <!-- TOOLS -->
-<section>
+<section class="sec" id="tools" style="padding-bottom:40px">
+  <i class="x l"></i><i class="x r"></i>
   <div class="wrap">
-    <div class="section-tag">Working stack</div>
-    <h2>Tools this runs on.</h2>
-    <div class="tool-strip">
-      <span>Google Ads</span><span>Meta Ads</span><span>LinkedIn</span><span>YouTube</span>
-      <span>Zoho CRM</span><span>SQL</span><span>Power BI</span><span>WhatsApp Business API</span>
-      <span>Zapier</span><span>HeyGen</span><span>ElevenLabs</span><span>Retell AI</span>
-      <span>Canva</span><span>SEO</span><span>Google Analytics</span><span>Budget Forecasting</span>
+    <div class="headrow" style="margin-bottom:40px">
+      <div>
+        <div class="label rv">Tools &amp; capabilities</div>
+        <h2 class="h rv d1"><span class="g">The stack that turns</span> strategy into execution.</h2>
+      </div>
     </div>
+  </div>
+  <div class="tools" aria-label="Tools">
+    <div class="trow"><span>Google Ads</span><span>Meta Ads</span><span>LinkedIn</span><span>YouTube</span><span>Zoho CRM</span><span>Power BI</span><span>SQL</span><span>WhatsApp Business API</span><span>Zapier</span><span>HeyGen</span><span>Google Ads</span><span>Meta Ads</span><span>LinkedIn</span><span>YouTube</span><span>Zoho CRM</span><span>Power BI</span><span>SQL</span><span>WhatsApp Business API</span><span>Zapier</span><span>HeyGen</span></div>
+    <div class="trow rev"><span>ElevenLabs</span><span>Retell AI</span><span>SEO</span><span>Content Strategy</span><span>Google Analytics</span><span>B2B Marketing</span><span>Campaign Management</span><span>Budget Forecasting</span><span>GTM Strategy</span><span>ElevenLabs</span><span>Retell AI</span><span>SEO</span><span>Content Strategy</span><span>Google Analytics</span><span>B2B Marketing</span><span>Campaign Management</span><span>Budget Forecasting</span><span>GTM Strategy</span></div>
   </div>
 </section>
+</main>
 
 <!-- FOOTER -->
-<footer class="footer">
+<footer id="contact">
   <div class="wrap">
-    <div class="contact-grid">
-      <div>
-        <div class="section-tag">Contact</div>
-        <h2>Working on something that needs this? Let's talk.</h2>
-      </div>
-      <div class="contact-details">
-        Email — <a href="mailto:charan.shankar09@gmail.com">charan.shankar09@gmail.com</a><br>
-        Phone (IN) — <a href="tel:+918197307148">+91 81973 07148</a><br>
-        Phone (UAE) — <a href="tel:+971542191453">+971 54 219 1453</a><br>
-        Instagram — <a href="https://www.instagram.com/charan09_builds/" target="_blank" rel="noopener">@charan09_builds</a><br>
-        Based in — Dubai &amp; Bangalore
+    <div class="fcta">
+      <h2 class="h rv">Have a growth challenge? <em>Let's talk.</em></h2>
+      <div class="side rv d1">
+        <p>Open to marketing leadership roles, consulting and growth partnerships.</p>
+        <a href="tel:+918197307148" class="cta magnet">Call +91 81973 07148 <span class="chev">&#8250;&#8250;</span></a>
+        <a href="mailto:charan.shankar09@gmail.com" class="pill ig" style="margin-top:0">charan.shankar09@gmail.com</a>
       </div>
     </div>
-    <div class="foot-meta">
-      <span>R. Charan Shankar Naidu — MBA Marketing, Jain University</span>
-      <span>English · Kannada · Telugu · Hindi</span>
+    <div class="fgrid">
+      <div><h4>Let's talk</h4><a href="tel:+918197307148">+91 8197307148</a><a href="https://wa.me/918197307148" target="_blank" rel="noopener">WhatsApp</a></div>
+      <div><h4>Send email</h4><a href="mailto:charan.shankar09@gmail.com">charan.shankar09@gmail.com</a></div>
+      <div><h4>Explore</h4><a href="#expertise">Expertise</a><a href="#work">Selected Work</a><a href="#impact">Impact</a><a href="#experience">Experience</a></div>
+      <div><h4>Social</h4><a href="https://www.instagram.com/charan09_builds/" target="_blank" rel="noopener">Instagram</a><span>Dubai · Bangalore</span></div>
     </div>
   </div>
+  <div class="wordmark" aria-hidden="true"><span>C</span><span>H</span><span>A</span><span>R</span><span>A</span><span>N</span></div>
+  <div class="wrap fbot"><span>R. Charan Shankar Naidu · MBA in Marketing, Jain University</span><span>© <span id="yr"></span> · Built for growth</span></div>
 </footer>
 
+<div class="float">
+  <a class="wa" href="https://wa.me/918197307148" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/></svg></a>
+  <a class="gq" href="#contact">Get in touch</a>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="x" id="lbX" aria-label="Close">&times;</button>
+  <button class="pv" id="lbP" aria-label="Previous">&#8249;</button>
+  <img id="lbImg" alt="">
+  <button class="nx" id="lbN" aria-label="Next">&#8250;</button>
+  <div class="lbc" id="lbC"></div>
+</div>
+
 <script>
-  // Domain filter for Selected Work
-  (function(){
-    var buttons = document.querySelectorAll('.filter-btn');
-    var cards = document.querySelectorAll('.work-card');
+(()=>{
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+$('#yr').textContent=new Date().getFullYear();
 
-    buttons.forEach(function(btn){
-      btn.addEventListener('click', function(){
-        buttons.forEach(function(b){ b.classList.remove('active'); });
-        btn.classList.add('active');
+/* ---- preloader ---- */
+const loader=$('#loader'),lc=$('#lcount');let n=0;
+const start=performance.now();
+function tick(t){n=Math.min(100,Math.round((t-start)/9));lc.textContent=n;if(n<100&&!RM)requestAnimationFrame(tick);else finish()}
+function finish(){loader.classList.add('done');document.body.classList.add('ready');setTimeout(()=>loader.remove(),1100)}
+RM?finish():requestAnimationFrame(tick);
 
-        var filter = btn.getAttribute('data-filter');
+/* ---- clocks ---- */
+const fmt=tz=>new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:tz}).format(new Date());
+function clocks(){$('#t-dxb').textContent=fmt('Asia/Dubai');$('#t-blr').textContent=fmt('Asia/Kolkata')}
+clocks();setInterval(clocks,15000);
 
-        cards.forEach(function(card){
-          var domains = card.getAttribute('data-domains') || '';
-          if (filter === 'all' || domains.indexOf(filter) !== -1) {
-            card.classList.remove('hide');
-          } else {
-            card.classList.add('hide');
-          }
-        });
-      });
-    });
-  })();
+/* ---- hero title split ---- */
+const ht=$('#heroTitle');
+(function split(el){let d=0;const out=[];el.childNodes.forEach(nd=>{const cls=nd.nodeType===1?nd.className:'';const txt=nd.textContent;txt.split(/(\s+)/).forEach(w=>{if(!w.trim()){out.push(' ');return}out.push(`<span class="w"><span class="${cls}" style="transition-delay:${(.25+d++*.055).toFixed(3)}s">${w.replace(/&/g,'&amp;')}</span></span>`)})});el.innerHTML=out.join('')})(ht);
+
+/* ---- glitch statement ---- */
+const gl=$('#glitch');const dimN=+gl.dataset.dim;
+gl.innerHTML=gl.textContent.trim().split(/\s+/).map((w,i)=>`<span class="gw${i<dimN?' d':''}">${w}</span>`).join(' ');
+const gws=$$('#glitch .gw');
+
+/* ---- reveal ---- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+$$('.rv,.work,.stat').forEach(el=>io.observe(el));
+
+/* ---- counters ---- */
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);const el=e.target,to=+el.dataset.count,t0=performance.now(),dur=1600;
+  const step=t=>{const p=Math.min(1,(t-t0)/dur),v=1-Math.pow(1-p,4);el.textContent=Math.round(to*v);if(p<1)requestAnimationFrame(step)};RM?el.textContent=to:requestAnimationFrame(step)}),{threshold:.5});
+$$('[data-count]').forEach(el=>co.observe(el));
+
+/* ---- scroll-driven ---- */
+const nav=$('#nav'),prog=$('#progress'),band=$('#band img'),phones=$$('#phones .phone'),wimgs=$$('.wimg img');
+const hs=$('#moments'),track=$('#hsTrack'),hsBar=$('#hsBar'),hsNow=$('#hsNow'),shots=$$('.shot');
+$('#hsAll').textContent=String(shots.length).padStart(2,'0');
+let hsDist=0;
+function sizeHS(){if(innerWidth<=860){hs.style.height='';hsDist=0;return}hsDist=Math.max(0,track.scrollWidth-innerWidth+40);hs.style.height=(innerHeight+hsDist)+'px'}
+let ticking=false;
+function onScroll(){if(ticking)return;ticking=true;requestAnimationFrame(()=>{ticking=false;
+  const y=scrollY,H=document.documentElement.scrollHeight-innerHeight;
+  prog.style.transform=`scaleX(${H?y/H:0})`;
+  nav.classList.toggle('compact',y>160);document.body.classList.toggle('scrolled',y>innerHeight*.6);
+  // glitch progress
+  const r=gl.getBoundingClientRect();const p=(innerHeight*.85-r.top)/(r.height+innerHeight*.35);
+  gws.forEach((w,i)=>{const on=p>i/gws.length;if(on!==w.classList.contains('on')){w.classList.toggle('on',on);w.classList.toggle('dim',on&&w.classList.contains('d'))}});
+  if(RM)return;
+  // parallax
+  const br=band.parentElement.getBoundingClientRect();if(br.bottom>0&&br.top<innerHeight){band.style.transform=`translateY(${((br.top+br.height/2)-innerHeight/2)*-.12}px)`}
+  wimgs.forEach(im=>{const b=im.parentElement.getBoundingClientRect();if(b.bottom>0&&b.top<innerHeight)im.style.transform=`translateY(${((b.top+b.height/2)-innerHeight/2)*-.07}px)`});
+  const pr=phones[0].parentElement.getBoundingClientRect();if(pr.bottom>0&&pr.top<innerHeight){const c=(pr.top+pr.height/2-innerHeight/2)/innerHeight;phones.forEach((ph,i)=>{const d=+ph.dataset.depth;ph.style.transform=`translateY(${c*d*6}px) rotate(${i?5+c*4:-6-c*4}deg)`})}
+  // horizontal gallery
+  if(hsDist){const t=hs.getBoundingClientRect().top;const q=Math.min(1,Math.max(0,-t/hsDist));track.style.transform=`translate3d(${-q*hsDist}px,0,0)`;hsBar.style.transform=`scaleX(${q})`;hsNow.textContent=String(Math.min(shots.length,1+Math.floor(q*shots.length))).padStart(2,'0')}
+})}
+addEventListener('scroll',onScroll,{passive:true});
+addEventListener('resize',()=>{sizeHS();onScroll()});
+addEventListener('load',()=>{sizeHS();onScroll()});
+sizeHS();onScroll();
+
+/* ---- mobile menu ---- */
+const burger=$('#burger');burger.addEventListener('click',()=>document.body.classList.toggle('menu-open'));
+$$('#mmenu a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-open')));
+
+/* ---- cursor + magnets ---- */
+if(fine&&!RM){
+  const cur=$('#cur');let mx=-100,my=-100,cx=-100,cy=-100;
+  addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY},{passive:true});
+  (function loop(){cx+=(mx-cx)*.2;cy+=(my-cy)*.2;cur.style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(loop)})();
+  $$('.wimg,.shot').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('view'));el.addEventListener('mouseleave',()=>cur.classList.remove('view'))});
+  $$('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('link'));el.addEventListener('mouseleave',()=>cur.classList.remove('link'))});
+  $$('.magnet').forEach(el=>{
+    el.addEventListener('mousemove',e=>{const b=el.getBoundingClientRect(),x=e.clientX-b.left,y=e.clientY-b.top;el.style.setProperty('--mx',x+'px');el.style.setProperty('--my',y+'px');el.style.transform=`translate(${(x-b.width/2)*.18}px,${(y-b.height/2)*.28}px)`});
+    el.addEventListener('mouseleave',()=>el.style.transform='')});
+  $$('.card').forEach(el=>{el.addEventListener('mousemove',e=>{const b=el.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;el.style.transform=`translateY(-8px) perspective(900px) rotateX(${-y*5}deg) rotateY(${x*6}deg)`});el.addEventListener('mouseleave',()=>el.style.transform='')});
+  $$('.wordmark span').forEach(s=>s.addEventListener('mouseenter',()=>{s.animate([{transform:'translateY(0)'},{transform:'translateY(-8%)'},{transform:'translateY(0)'}],{duration:600,easing:'cubic-bezier(.2,.7,.1,1)'})}));
+}
+
+/* ---- lightbox ---- */
+const items=$$('[data-lb]').sort((a,b)=>a.dataset.lb-b.dataset.lb).map(f=>{const im=f.querySelector('img');return{src:im.getAttribute('src'),alt:im.alt}});
+const lb=$('#lb'),lbImg=$('#lbImg'),lbC=$('#lbC');let li=0;
+function show(i){li=(i+items.length)%items.length;lbImg.src=items[li].src;lbImg.alt=items[li].alt;lbC.textContent=`${items[li].alt} — ${li+1} / ${items.length}`}
+function open(i){show(i);lb.classList.add('open');document.body.style.overflow='hidden'}
+function close(){lb.classList.remove('open');document.body.style.overflow=''}
+$$('[data-lb]').forEach(f=>f.addEventListener('click',()=>open(+f.dataset.lb)));
+$('#lbX').onclick=close;$('#lbP').onclick=()=>show(li-1);$('#lbN').onclick=()=>show(li+1);
+lb.addEventListener('click',e=>{if(e.target===lb)close()});
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(li-1);if(e.key==='ArrowRight')show(li+1)});
+
+/* ---- particle portrait ---- */
+const cv=$('#particles'),ctx=cv.getContext('2d');
+const img=new Image();img.src='images/main-2.jpg';
+let P=[],W=0,H=0,dpr=1,mouse={x:-9999,y:-9999},running=true,built=false;
+// crop focused on Charan in the source photo (fractions of the image)
+const CROP={x:.22,y:.02,w:.62,h:.98};
+// hide the presentation screen behind Charan, keep his silhouette (source-image fractions)
+const keep=(u,v)=>{const inScreen=u>.19&&u<.91&&v>.05&&v<.68;if(!inScreen)return true;
+  const head=((u-.59)/.09)**2+((v-.22)/.17)**2<1, torso=u>.43&&u<.8&&v>.37, arm=u>.29&&u<.46&&v>.53&&v<.75;
+  return head||torso||arm};
+function build(){
+  const r=cv.getBoundingClientRect();W=r.width;H=r.height;dpr=Math.min(devicePixelRatio||1,2);
+  cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+  const sw=img.naturalWidth*CROP.w,sh=img.naturalHeight*CROP.h,sx=img.naturalWidth*CROP.x,sy=img.naturalHeight*CROP.y;
+  const scale=Math.max(W/sw,H/sh);const dw=sw*scale,dh=sh*scale,ox=(W-dw)/2,oy=(H-dh)/2;
+  const step=W<500?5:6;
+  const off=document.createElement('canvas');off.width=Math.ceil(W/step);off.height=Math.ceil(H/step);
+  const o=off.getContext('2d',{willReadFrequently:true});
+  o.drawImage(img,sx,sy,sw,sh,ox/step,oy/step,dw/step,dh/step);
+  const d=o.getImageData(0,0,off.width,off.height).data;
+  // auto-levels on the visible area
+  const lum=[];for(let k=0;k<d.length;k+=4)if(d[k+3])lum.push(.299*d[k]+.587*d[k+1]+.114*d[k+2]);
+  lum.sort((a,b)=>a-b);const lo=lum[Math.floor(lum.length*.04)]||0,hi=lum[Math.floor(lum.length*.9)]||255;
+  P=[];
+  const cx=W*.5,cy=H*.45,rad=Math.hypot(W,H)*.52;
+  for(let y=0;y<off.height;y++)for(let x=0;x<off.width;x++){
+    const k=(y*off.width+x)*4;if(!d[k+3])continue;
+    let L=((.299*d[k]+.587*d[k+1]+.114*d[k+2])-lo)/Math.max(1,hi-lo);
+    L=Math.pow(Math.min(1,Math.max(0,L)),1.35);
+    const px=x*step+step/2,py=y*step+step/2;
+    if(!keep(CROP.x+(px-ox)/dw*CROP.w,CROP.y+(py-oy)/dh*CROP.h))continue;
+    const fade=1-Math.min(1,Math.hypot(px-cx,(py-cy)*.9)/rad);
+    const ink=(1-L)*Math.pow(fade,.7);
+    if(ink<.16)continue;
+    const lime=Math.random()<.025&&ink>.25;
+    const p={hx:px,hy:py,x:built?px:Math.random()*W,y:built?py:H+Math.random()*H*.5,vx:0,vy:0,
+      s:Math.max(.6,ink*step*.55),a:Math.min(1,.25+ink),lime,
+      drift:px>W*.66?Math.pow((px-W*.66)/(W*.34),2):0,ph:Math.random()*6.28};
+    P.push(p);
+  }
+  built=true;
+}
+function frame(t){
+  if(running){
+    ctx.clearRect(0,0,W,H);
+    const R=W<500?70:110,R2=R*R;
+    for(const p of P){
+      // dissolve on right edge
+      let tx=p.hx,ty=p.hy;
+      if(p.drift){const o=Math.sin(t*.0006+p.ph);tx+=p.drift*(30+o*24);ty+=p.drift*Math.cos(t*.0005+p.ph)*18}
+      const dx=p.x-mouse.x,dy=p.y-mouse.y,d2=dx*dx+dy*dy;
+      if(d2<R2){const f=(1-d2/R2)*2.6,d=Math.sqrt(d2)||1;p.vx+=dx/d*f;p.vy+=dy/d*f}
+      p.vx+=(tx-p.x)*.045;p.vy+=(ty-p.y)*.045;p.vx*=.82;p.vy*=.82;p.x+=p.vx;p.y+=p.vy;
+      ctx.fillStyle=p.lime?`rgba(196,240,0,${Math.min(1,p.a+.2)})`:`rgba(18,18,18,${p.a*(1-p.drift*.6)})`;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.lime?p.s*.8+.6:p.s*.5,0,6.283);ctx.fill();
+    }
+  }
+  requestAnimationFrame(frame);
+}
+function setMouse(e){const r=cv.getBoundingClientRect();const pt=e.touches?e.touches[0]:e;mouse.x=pt.clientX-r.left;mouse.y=pt.clientY-r.top}
+cv.addEventListener('mousemove',setMouse);cv.addEventListener('touchmove',setMouse,{passive:true});
+cv.addEventListener('mouseleave',()=>{mouse.x=mouse.y=-9999});cv.addEventListener('touchend',()=>{mouse.x=mouse.y=-9999});
+new IntersectionObserver(es=>{running=es[0].isIntersecting}).observe(cv);
+img.onload=()=>{build();if(RM){for(const p of P){p.x=p.hx;p.y=p.hy}}requestAnimationFrame(frame)};
+let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{if(img.complete)build()},200)});
+})();
 </script>
-
 </body>
 </html>
