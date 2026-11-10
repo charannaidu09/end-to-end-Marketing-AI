@@ -101,7 +101,8 @@ body.ready .hero h1 .w>span{transform:none}
 .pill .av img{width:100%;height:100%;object-fit:cover;object-position:59% 24%;transform:scale(2.6);transform-origin:59% 24%}
 .pill.light{background:#ECEEF0;padding:14px 24px}
 .pill.light:hover{background:var(--lime)}
-.hero-art{position:relative;height:min(78svh,720px);min-height:420px}
+.hero-art{position:relative;height:min(78svh,720px);min-height:420px;transform-style:preserve-3d;will-change:transform}
+.hero-art:before{content:"";position:absolute;left:-14%;right:-14%;bottom:-6%;height:75%;background:radial-gradient(ellipse 55% 70% at 50% 100%,rgba(213,254,0,.85) 0%,rgba(213,254,0,.35) 45%,rgba(213,254,0,0) 75%);pointer-events:none}
 #particles{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y}
 .hero-tag{position:absolute;right:4%;bottom:10%;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:14px 18px;font-size:12.5px;color:var(--muted);box-shadow:0 20px 40px -24px rgba(0,0,0,.3);opacity:0;transform:translateY(20px);transition:all 1s var(--ease) 1.2s}
 body.ready .hero-tag{opacity:1;transform:none}
@@ -409,7 +410,7 @@ body.scrolled .float{transform:none}
     </div>
   </div>
   <div class="hero-art">
-    <canvas id="particles" aria-label="Portrait of Charan rendered as interactive particles"></canvas>
+    <canvas id="particles" aria-label="Portrait of Charan that follows your cursor"></canvas>
     <div class="hero-tag"><strong>₹50 Cr</strong>revenue scaled at Irra Agrotech</div>
   </div>
   <div class="scrollhint"><i></i>Scroll to explore</div>
@@ -763,70 +764,82 @@ $('#lbX').onclick=close;$('#lbP').onclick=()=>show(li-1);$('#lbN').onclick=()=>s
 lb.addEventListener('click',e=>{if(e.target===lb)close()});
 addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(li-1);if(e.key==='ArrowRight')show(li+1)});
 
-/* ---- particle portrait ---- */
-const cv=$('#particles'),ctx=cv.getContext('2d');
-const img=new Image();img.src='images/main-2.jpg';
-let P=[],W=0,H=0,dpr=1,mouse={x:-9999,y:-9999},running=true,built=false;
-// crop focused on Charan in the source photo (fractions of the image)
-const CROP={x:.22,y:.02,w:.62,h:.98};
-// hide the presentation screen behind Charan, keep his silhouette (source-image fractions)
-const keep=(u,v)=>{const inScreen=u>.19&&u<.91&&v>.05&&v<.68;if(!inScreen)return true;
-  const head=((u-.59)/.09)**2+((v-.22)/.17)**2<1, torso=u>.43&&u<.8&&v>.37, arm=u>.29&&u<.46&&v>.53&&v<.75;
-  return head||torso||arm};
+/* ---- silhouette portrait: follows the cursor, blurs, glitches and dissolves ---- */
+const cv=$('#particles'),ctx=cv.getContext('2d'),art=cv.parentElement;
+const img=new Image();img.src='images/charan-cutout.webp';
+const NECK=.37; // neck line as a fraction of the cutout height
+let W=0,H=0,dpr=1,fx=0,fy=0,fw=0,fh=0,head,body,redL,blueL,edge=[],P=[];
+let tx=0,ty=0,sx=0,sy=0,px=0,py=0,vel=0,glitchT=0,slices=[],running=true,idleT=0,lastMove=0;
+function layer(){const c=document.createElement('canvas');c.width=W*dpr;c.height=H*dpr;const g=c.getContext('2d');g.setTransform(dpr,0,0,dpr,0,0);return[c,g]}
 function build(){
   const r=cv.getBoundingClientRect();W=r.width;H=r.height;dpr=Math.min(devicePixelRatio||1,2);
   cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
-  const sw=img.naturalWidth*CROP.w,sh=img.naturalHeight*CROP.h,sx=img.naturalWidth*CROP.x,sy=img.naturalHeight*CROP.y;
-  const scale=Math.max(W/sw,H/sh);const dw=sw*scale,dh=sh*scale,ox=(W-dw)/2,oy=(H-dh)/2;
-  const step=W<500?5:6;
-  const off=document.createElement('canvas');off.width=Math.ceil(W/step);off.height=Math.ceil(H/step);
-  const o=off.getContext('2d',{willReadFrequently:true});
-  o.drawImage(img,sx,sy,sw,sh,ox/step,oy/step,dw/step,dh/step);
-  const d=o.getImageData(0,0,off.width,off.height).data;
-  // auto-levels on the visible area
-  const lum=[];for(let k=0;k<d.length;k+=4)if(d[k+3])lum.push(.299*d[k]+.587*d[k+1]+.114*d[k+2]);
-  lum.sort((a,b)=>a-b);const lo=lum[Math.floor(lum.length*.04)]||0,hi=lum[Math.floor(lum.length*.9)]||255;
+  const s=Math.min(W*.92/img.naturalWidth,H*.96/img.naturalHeight);fw=img.naturalWidth*s;fh=img.naturalHeight*s;fx=(W-fw)/2;fy=H-fh;
+  // dark figure with a lime fade from the bottom
+  const[fig,g]=layer();
+  g.drawImage(img,fx,fy,fw,fh);
+  g.globalCompositeOperation='source-atop';
+  g.fillStyle='rgba(26,28,32,.9)';g.fillRect(0,0,W,H);
+  const gr=g.createLinearGradient(0,fy+fh*.45,0,H);gr.addColorStop(0,'rgba(213,254,0,0)');gr.addColorStop(1,'rgba(200,245,0,.92)');
+  g.fillStyle=gr;g.fillRect(0,0,W,H);
+  for(let i=0;i<fw*fh/90;i++){const x=fx+Math.random()*fw,y=fy+Math.random()*fh;g.fillStyle=Math.random()<.5?'rgba(255,255,255,.10)':'rgba(213,254,0,.16)';g.fillRect(x,y,1,1)}
+  g.globalCompositeOperation='source-over';
+  // split into head and body with a soft seam at the neck
+  const ny=fy+fh*NECK,feather=fh*.05;
+  // overlapping masks so the seam never turns see-through
+  const mk=(top)=>{const[c,gg]=layer();gg.drawImage(fig,0,0,W,H);gg.globalCompositeOperation='destination-in';
+    const m=top?gg.createLinearGradient(0,ny,0,ny+feather):gg.createLinearGradient(0,ny-feather,0,ny);m.addColorStop(0,top?'#000':'rgba(0,0,0,0)');m.addColorStop(1,top?'rgba(0,0,0,0)':'#000');
+    gg.fillStyle=m;gg.fillRect(0,0,W,H);return c};
+  head=mk(true);body=mk(false);
+  const tint=(col)=>{const[c,gg]=layer();gg.drawImage(fig,0,0,W,H);gg.globalCompositeOperation='source-atop';gg.fillStyle=col;gg.fillRect(0,0,W,H);return c};
+  redL=tint('rgba(255,0,60,.9)');blueL=tint('rgba(0,70,255,.9)');
+  // right-hand edge points where particles peel away
+  const d=g.getImageData(0,0,fig.width,fig.height).data,step=Math.round(3*dpr);edge=[];
+  for(let y=Math.round((fy+fh*.08)*dpr);y<fig.height-step;y+=step){
+    for(let x=fig.width-1;x>fig.width*.45;x-=step){if(d[(y*fig.width+x)*4+3]>120){edge.push([x/dpr,y/dpr]);break}}}
   P=[];
-  const cx=W*.5,cy=H*.45,rad=Math.hypot(W,H)*.52;
-  for(let y=0;y<off.height;y++)for(let x=0;x<off.width;x++){
-    const k=(y*off.width+x)*4;if(!d[k+3])continue;
-    let L=((.299*d[k]+.587*d[k+1]+.114*d[k+2])-lo)/Math.max(1,hi-lo);
-    L=Math.pow(Math.min(1,Math.max(0,L)),1.35);
-    const px=x*step+step/2,py=y*step+step/2;
-    if(!keep(CROP.x+(px-ox)/dw*CROP.w,CROP.y+(py-oy)/dh*CROP.h))continue;
-    const fade=1-Math.min(1,Math.hypot(px-cx,(py-cy)*.9)/rad);
-    const ink=(1-L)*Math.pow(fade,.7);
-    if(ink<.16)continue;
-    const lime=Math.random()<.025&&ink>.25;
-    const p={hx:px,hy:py,x:built?px:Math.random()*W,y:built?py:H+Math.random()*H*.5,vx:0,vy:0,
-      s:Math.max(.6,ink*step*.55),a:Math.min(1,.25+ink),lime,
-      drift:px>W*.66?Math.pow((px-W*.66)/(W*.34),2):0,ph:Math.random()*6.28};
-    P.push(p);
-  }
-  built=true;
 }
+function spawn(){if(!edge.length)return;const e=edge[Math.random()*edge.length|0];
+  P.push({x:e[0]-Math.random()*14,y:e[1],vx:.2+Math.random()*.9,vy:-.15-Math.random()*.5,life:0,max:70+Math.random()*120,r:.6+Math.random()*1.6,lime:Math.random()<.12})}
+function onMove(cx,cy){const r=art.getBoundingClientRect();
+  tx=Math.max(-1,Math.min(1,(cx-(r.left+r.width/2))/(r.width*.6)));ty=Math.max(-1,Math.min(1,(cy-(r.top+r.height*.3))/(r.height*.7)));
+  px=cx-r.left;py=cy-r.top;lastMove=performance.now()}
+addEventListener('mousemove',e=>onMove(e.clientX,e.clientY),{passive:true});
+art.addEventListener('touchmove',e=>onMove(e.touches[0].clientX,e.touches[0].clientY),{passive:true});
 function frame(t){
-  if(running){
-    ctx.clearRect(0,0,W,H);
-    const R=W<500?70:110,R2=R*R;
-    for(const p of P){
-      // dissolve on right edge
-      let tx=p.hx,ty=p.hy;
-      if(p.drift){const o=Math.sin(t*.0006+p.ph);tx+=p.drift*(30+o*24);ty+=p.drift*Math.cos(t*.0005+p.ph)*18}
-      const dx=p.x-mouse.x,dy=p.y-mouse.y,d2=dx*dx+dy*dy;
-      if(d2<R2){const f=(1-d2/R2)*2.6,d=Math.sqrt(d2)||1;p.vx+=dx/d*f;p.vy+=dy/d*f}
-      p.vx+=(tx-p.x)*.045;p.vy+=(ty-p.y)*.045;p.vx*=.82;p.vy*=.82;p.x+=p.vx;p.y+=p.vy;
-      ctx.fillStyle=p.lime?`rgba(196,240,0,${Math.min(1,p.a+.2)})`:`rgba(92,97,104,${p.a*(1-p.drift*.6)})`;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.lime?p.s*.8+.6:p.s*.5,0,6.283);ctx.fill();
-    }
-  }
-  requestAnimationFrame(frame);
+  requestAnimationFrame(frame);if(!running||!head)return;
+  // idle: look around slowly on its own
+  if(t-lastMove>2500){idleT+=.008;tx=Math.sin(idleT)*.55;ty=Math.sin(idleT*.7)*.15;px=py=-999}
+  const ox=sx,oy=sy;sx+=(tx-sx)*.09;sy+=(ty-sy)*.09;
+  vel=vel*.82+Math.hypot(sx-ox,sy-oy)*60*.18;
+  if(vel>.9&&t>glitchT&&Math.random()<.18){glitchT=t+140;slices=Array.from({length:3+Math.random()*4|0},()=>({y:fy+Math.random()*fh,h:6+Math.random()*28,dx:(Math.random()-.5)*40}))}
+  ctx.clearRect(0,0,W,H);
+  const breathe=1+Math.sin(t*.0018)*.004;
+  // body: small lean toward the cursor
+  ctx.save();ctx.translate(W/2,H);ctx.scale(breathe,breathe);ctx.transform(1,0,sx*-.04,1,0,0);ctx.translate(-W/2+sx*8,-H);
+  ctx.drawImage(body,0,0,W,H);ctx.restore();
+  // head: turns further, with a motion smear when moving fast
+  const hcx=fx+fw*.58,hcy=fy+fh*NECK;
+  const drawHead=(k,a)=>{ctx.save();ctx.globalAlpha=a;ctx.translate(hcx,hcy);ctx.rotate(sx*.07*k);ctx.transform(1-Math.abs(sx)*.07*k,sy*.03*k,sx*-.1*k,1,0,0);ctx.translate(-hcx+sx*22*k,-hcy+sy*12*k);ctx.drawImage(head,0,0,W,H);ctx.restore()};
+  const trail=Math.min(5,vel*2.2|0);
+  for(let i=trail;i>0;i--)drawHead(1-i*.09,.16);
+  drawHead(1,1);
+  // glitch slices with RGB fringe
+  if(t<glitchT){for(const s of slices){const y=s.y*dpr,h=s.h*dpr;
+    ctx.drawImage(redL,0,y,cv.width,h,s.dx-5,s.y,W,s.h);ctx.drawImage(blueL,0,y,cv.width,h,s.dx+5,s.y,W,s.h);ctx.drawImage(body,0,y,cv.width,h,s.dx,s.y,W,s.h)}}
+  // dissolving particles off the right shoulder and head
+  for(let i=0;i<(vel>.5?6:3);i++)spawn();
+  for(let i=P.length-1;i>=0;i--){const p=P[i];p.life++;
+    const dx=p.x-px,dy=p.y-py,d2=dx*dx+dy*dy;if(d2<9000){const f=(1-d2/9000)*1.4,d=Math.sqrt(d2)||1;p.vx+=dx/d*f;p.vy+=dy/d*f}
+    p.vx=p.vx*.97+.012+Math.sin(p.y*.05+t*.002)*.02;p.vy*=.97;p.x+=p.vx;p.y+=p.vy;
+    const a=1-p.life/p.max;if(a<=0){P.splice(i,1);continue}
+    ctx.fillStyle=p.lime?`rgba(190,235,0,${a})`:`rgba(60,64,70,${a*.85})`;ctx.fillRect(p.x,p.y,p.r,p.r)}
+  // blur when the cursor whips across
+  cv.style.filter=vel>.6?`blur(${Math.min(5,(vel-.6)*3).toFixed(2)}px)`:'none';
+  art.style.transform=`perspective(1200px) rotateY(${(sx*7).toFixed(2)}deg) rotateX(${(-sy*4).toFixed(2)}deg)`;
 }
-function setMouse(e){const r=cv.getBoundingClientRect();const pt=e.touches?e.touches[0]:e;mouse.x=pt.clientX-r.left;mouse.y=pt.clientY-r.top}
-cv.addEventListener('mousemove',setMouse);cv.addEventListener('touchmove',setMouse,{passive:true});
-cv.addEventListener('mouseleave',()=>{mouse.x=mouse.y=-9999});cv.addEventListener('touchend',()=>{mouse.x=mouse.y=-9999});
 new IntersectionObserver(es=>{running=es[0].isIntersecting}).observe(cv);
-img.onload=()=>{build();if(RM){for(const p of P){p.x=p.hx;p.y=p.hy}}requestAnimationFrame(frame)};
+img.onload=()=>{build();if(RM){ctx.clearRect(0,0,W,H);ctx.drawImage(body,0,0,W,H);ctx.drawImage(head,0,0,W,H);return}requestAnimationFrame(frame)};
 let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{if(img.complete)build()},200)});
 })();
 </script>
